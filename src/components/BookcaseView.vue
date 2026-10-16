@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { computed } from "vue";
+import { backRowColor } from "../colors.ts";
 import type { Row } from "../domain/compartment.ts";
 import type { BookcaseLayout, Compartment } from "../domain/layout.ts";
 import { zoneHeights } from "../domain/settings.ts";
@@ -10,7 +11,7 @@ const props = defineProps<{
   bookcase: BookcaseLayout;
   settings: Settings;
   colors: Map<string, string>;
-  highlighted: string | null;
+  seriesIds: Map<string, number>;
 }>();
 
 const emit = defineEmits<{ hover: [book: Book | null] }>();
@@ -28,14 +29,16 @@ const interiorBottom = computed(() => TOP + props.settings.innerHeight);
 
 const y = (fromBottom: number) => interiorBottom.value - fromBottom;
 
-const shelves = computed(() => {
-  const list = [zoneHeights(props.settings).lower];
-  for (const zone of ["upper", "lower"] as const) {
-    const inZone = props.bookcase.compartments.filter((c) => c.zone === zone);
-    inZone.slice(1).forEach((c) => list.push(c.bottom + c.height));
-  }
-  return list;
-});
+const fixedShelf = computed(() => zoneHeights(props.settings).lower);
+
+const movableShelves = computed(() =>
+  (["upper", "lower"] as const).flatMap((zone) =>
+    props.bookcase.compartments
+      .filter((c) => c.zone === zone)
+      .slice(1)
+      .map((c) => c.bottom + c.height),
+  ),
+);
 
 interface Spine {
   book: Book;
@@ -43,17 +46,22 @@ interface Spine {
   y: number;
   width: number;
   height: number;
+  fill: string;
+  series: number | undefined;
 }
 
-function spines(row: Row, floor: number): Spine[] {
+function spines(row: Row, floor: number, back: boolean): Spine[] {
   let x = SIDE + ROW_OFFSET;
   return row.books.map((book) => {
+    const color = props.colors.get(book.id) ?? "grey";
     const spine = {
       book,
       x,
       y: y(floor + book.dims.height),
       width: Math.max(0.05, book.dims.thickness - BOOK_GAP),
       height: book.dims.height,
+      fill: back ? backRowColor(color) : color,
+      series: props.seriesIds.get(book.seriesTitle),
     };
     x += book.dims.thickness;
     return spine;
@@ -62,7 +70,6 @@ function spines(row: Row, floor: number): Spine[] {
 
 const rows = computed(() =>
   props.bookcase.compartments.map((c: Compartment) => ({
-    compartment: c,
     riser: c.back
       ? {
           x: SIDE,
@@ -71,12 +78,21 @@ const rows = computed(() =>
           height: props.settings.riserHeight,
         }
       : null,
-    back: c.back ? spines(c.back, c.bottom + props.settings.riserHeight) : [],
-    front: spines(c.front, c.bottom),
+    layers: [
+      c.back ? spines(c.back, c.bottom + props.settings.riserHeight, true) : [],
+      spines(c.front, c.bottom, false),
+    ],
   })),
 );
 
-const dimmed = (book: Book) => props.highlighted !== null && book.seriesTitle !== props.highlighted;
+const booksById = computed(
+  () => new Map(rows.value.flatMap((r) => r.layers.flat().map((s) => [s.book.id, s.book]))),
+);
+
+function onOver(event: MouseEvent) {
+  const id = (event.target as Element).closest("[data-book]")?.getAttribute("data-book");
+  emit("hover", (id && booksById.value.get(id)) || null);
+}
 
 const hatchId = computed(() => `hatch-${props.bookcase.index}`);
 </script>
@@ -87,8 +103,14 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
     :viewBox="`0 0 ${outerWidth} ${outerHeight}`"
     role="img"
     :aria-label="`Billy ${bookcase.index + 1}`"
+    @mouseover="onOver"
     @mouseleave="emit('hover', null)"
   >
+    <defs>
+      <pattern :id="hatchId" patternUnits="userSpaceOnUse" width="1.2" height="1.2">
+        <path d="M -0.3 0.3 L 0.3 -0.3 M 0 1.2 L 1.2 0 M 0.9 1.5 L 1.5 0.9" class="hatch" />
+      </pattern>
+    </defs>
     <rect class="frame" x="0" y="0" :width="outerWidth" :height="outerHeight" rx="0.4" />
     <rect
       class="inside"
@@ -98,43 +120,40 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
       :height="settings.innerHeight"
     />
     <rect
-      v-for="(shelf, i) in shelves"
+      v-for="(shelf, i) in movableShelves"
       :key="`shelf-${i}`"
       class="shelf"
-      :class="{ fixed: i === 0 }"
       :x="SIDE"
       :y="y(shelf + settings.shelfThickness)"
       :width="settings.innerWidth"
       :height="settings.shelfThickness"
     />
-    <defs>
-      <pattern :id="hatchId" patternUnits="userSpaceOnUse" width="1.2" height="1.2">
-        <path d="M -0.3 0.3 L 0.3 -0.3 M 0 1.2 L 1.2 0 M 0.9 1.5 L 1.5 0.9" class="hatch" />
-      </pattern>
-    </defs>
+    <rect
+      class="shelf fixed"
+      :x="SIDE"
+      :y="y(fixedShelf + settings.shelfThickness)"
+      :width="settings.innerWidth"
+      :height="settings.shelfThickness"
+    />
+    <text class="fixed-label" :x="outerWidth - SIDE - 0.6" :y="y(fixedShelf) - 0.35">
+      PLANCHE FIXE
+    </text>
     <g v-for="(row, i) in rows" :key="`compartment-${i}`">
       <rect v-if="row.riser" class="riser" v-bind="row.riser" />
-      <g
-        v-for="layer in [
-          { name: 'back', spines: row.back },
-          { name: 'front', spines: row.front },
-        ]"
-        :key="layer.name"
-        :class="layer.name"
-      >
+      <g v-for="(layer, l) in row.layers" :key="l">
         <g
-          v-for="spine in layer.spines"
+          v-for="spine in layer"
           :key="spine.book.id"
           class="spine"
-          :class="{ dimmed: dimmed(spine.book) }"
-          @mouseenter="emit('hover', spine.book)"
+          :data-book="spine.book.id"
+          :data-s="spine.series"
         >
           <rect
             :x="spine.x"
             :y="spine.y"
             :width="spine.width"
             :height="spine.height"
-            :fill="colors.get(spine.book.id)"
+            :fill="spine.fill"
           />
           <rect
             v-if="spine.book.estimated"
@@ -173,25 +192,24 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
   fill: var(--billy-fixed);
 }
 
+.fixed-label {
+  font-size: 1.5px;
+  font-weight: 700;
+  letter-spacing: 0.1px;
+  text-anchor: end;
+  fill: var(--billy-fixed-label);
+}
+
 .riser {
   fill: var(--riser);
 }
 
-.back {
-  filter: brightness(0.62) saturate(0.85);
-}
-
 .spine {
-  transition: opacity 120ms;
   cursor: pointer;
 }
 
 .hatch {
   stroke: rgb(255 255 255 / 0.55);
   stroke-width: 0.25;
-}
-
-.spine.dimmed {
-  opacity: 0.22;
 }
 </style>

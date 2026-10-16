@@ -4,6 +4,7 @@ import { seriesColor } from "./colors.ts";
 import BookcaseView from "./components/BookcaseView.vue";
 import PlanList from "./components/PlanList.vue";
 import SettingsPanel from "./components/SettingsPanel.vue";
+import { useHighlightStyle } from "./composables/useHighlightStyle.ts";
 import { useSettings } from "./composables/useSettings.ts";
 import { COLLECTION, DIMENSIONS, SAMPLE, volumeCount } from "./data/library.ts";
 import { UNIVERSES } from "./data/universes.ts";
@@ -22,6 +23,14 @@ const hovered = ref<Book | null>(null);
 const planHover = ref<string | null>(null);
 const focus = ref<number | null>(null);
 const highlighted = computed(() => hovered.value?.seriesTitle ?? planHover.value);
+const seriesIds = computed(() => {
+  const ids = new Map<string, number>();
+  units.value.forEach((u) => ids.has(u.seriesTitle) || ids.set(u.seriesTitle, ids.size));
+  return ids;
+});
+useHighlightStyle(
+  computed(() => (highlighted.value === null ? undefined : seriesIds.value.get(highlighted.value))),
+);
 const planBookcases = computed(() =>
   layout.value.bookcases.filter((b) => focus.value === null || b.index === focus.value),
 );
@@ -70,7 +79,8 @@ const hoverText = computed(() => {
   const edition = book.editionTitle ? ` (${book.editionTitle})` : "";
   const { width, thickness, height } = book.dims;
   const estimated = book.estimated ? ", estimé" : "";
-  return `${book.seriesTitle}${edition} · t. ${book.number} · ${cm(width)} × ${cm(thickness)} × ${cm(height)} cm${estimated}`;
+  const number = book.number === 0 ? "" : ` · t. ${book.number}`;
+  return `${book.seriesTitle}${edition}${number} · ${cm(width)} × ${cm(thickness)} × ${cm(height)} cm${estimated}`;
 });
 </script>
 
@@ -118,14 +128,10 @@ const hoverText = computed(() => {
         <li><span class="swatch back"></span>Rangée arrière</li>
       </ul>
       <p class="hover" aria-live="polite">
-        <img
-          v-if="hovered?.cover"
-          :src="hovered.cover"
-          alt=""
-          referrerpolicy="no-referrer"
-          class="hover-cover"
-        />
-        <span>{{ hoverText }}</span>
+        <span class="hover-cover">
+          <img v-if="hovered?.cover" :src="hovered.cover" alt="" referrerpolicy="no-referrer" />
+        </span>
+        <span class="hover-text">{{ hoverText }}</span>
       </p>
     </div>
 
@@ -140,7 +146,7 @@ const hoverText = computed(() => {
           :bookcase="bookcase"
           :settings="settings"
           :colors="colors"
-          :highlighted="highlighted"
+          :series-ids="seriesIds"
           @hover="hovered = $event"
         />
         <figcaption>
@@ -312,7 +318,9 @@ h2 {
   align-items: center;
   gap: 10px;
   margin: 0;
-  min-height: 1.4em;
+  height: 50px;
+  min-width: 0;
+  max-width: 100%;
   font-size: 14px;
   font-variant-numeric: tabular-nums;
 }
@@ -343,10 +351,25 @@ figure.muted {
 }
 
 .hover-cover {
+  flex: none;
   width: 34px;
   height: 50px;
-  object-fit: cover;
   border-radius: 3px;
+  background: var(--surface-2);
+  overflow: hidden;
+}
+
+.hover-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hover-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .plan-head {

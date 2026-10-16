@@ -13,7 +13,8 @@
   --billy: #e9e5de;
   --billy-inside: #d8d3ca;
   --billy-shelf: #f7f5f1;
-  --billy-fixed: #ece8e1;
+  --billy-fixed: #b5521b;
+  --billy-fixed-label: #ffffff;
   --riser: #b9b2a6;
   font-family: "Inter", system-ui, -apple-system, sans-serif;
   color: var(--text);
@@ -35,7 +36,8 @@
     --billy: #c9c3b9;
     --billy-inside: #8f897f;
     --billy-shelf: #d8d3ca;
-    --billy-fixed: #cfc9bf;
+    --billy-fixed: #f08a4b;
+    --billy-fixed-label: #1d1b18;
     --riser: #6e685f;
   }
 }

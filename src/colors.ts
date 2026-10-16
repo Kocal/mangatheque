@@ -24,3 +24,12 @@ export function seriesColor(group: Audience | null, colorIndex: number): string 
   }
   return `hsl(${AUDIENCE_HUES[group]} ${saturation}% ${lightness}%)`;
 }
+
+export function backRowColor(color: string): string {
+  const match = /^hsl\((\d+) (\d+)% (\d+)%\)$/.exec(color);
+  if (!match) {
+    return color;
+  }
+  const [, hue, saturation, lightness] = match.map(Number);
+  return `hsl(${hue} ${Math.round(saturation * 0.85)}% ${Math.round(lightness * 0.62)}%)`;
+}

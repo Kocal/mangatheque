@@ -1,0 +1,552 @@
+{
+  "067e37be-b1aa-485f-a675-1b756987e578": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "06eaaf6f-5b1a-4d06-86dd-90f864148b4d": {
+    "width": 12,
+    "thickness": 1.4,
+    "height": 18
+  },
+  "07490273-cb07-4626-98f8-bdcfaf8e62a3": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "07f8ac76-0518-4aed-8913-5c4e062113bc": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "090dec85-a427-4b72-a9b5-0a92296aa0dc": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "0bc6789a-35ed-4a72-8dd3-3c9959dd3caa": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "0bf29037-b5e9-4086-b212-bf280b09946c": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "0eaf32c6-beda-4910-b2e5-aa3ebdce3fc8": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "0f67cdc5-0d13-485f-92e6-a8026588de47": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "119c5d31-a8d7-40e0-a571-b63176217e75": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "16e080d6-2c26-46d5-a2ba-4109c7826bbf": {
+    "width": 12.5,
+    "thickness": 1.7,
+    "height": 18
+  },
+  "17684581-d751-4ae9-a029-ed795d3a1913": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "1992c14a-d43b-4fda-9eb0-688b01fba9db": {
+    "width": 12.5,
+    "thickness": 1.7,
+    "height": 18
+  },
+  "22bf7358-1573-4997-9091-f72ba43bd75a": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "27530bd9-735a-4a4d-a7bf-94527daa02a9": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "2b0225c8-4d1b-4fe3-babf-d703f12b6590": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "2c454fb1-21ca-4131-a810-a40104557855": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "30a69cad-4f60-4a90-92f6-1fab3fe0151c": {
+    "width": 12.5,
+    "thickness": 1.7,
+    "height": 18
+  },
+  "37916fe1-dabd-4479-acf9-ba2e7917531a": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "3c0349a1-befe-483e-9978-bd2a70a86836": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "3c86b7d3-ce72-4ac9-a469-5a5cff4852f8": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "3c9b1866-b4c7-46de-afbf-7e57bfe8c8fc": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "3e9fe94d-e298-4031-a494-21ee4b65fb62": {
+    "width": 12.5,
+    "thickness": 3,
+    "height": 18
+  },
+  "41cda46c-2017-4e43-b05c-3704c6a48130": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "44d83e11-ba11-4a27-89b8-4329bf4d25cd": {
+    "width": 12.3,
+    "thickness": 3,
+    "height": 18
+  },
+  "454877ba-57a1-4eba-869c-ae622d1aed9e": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "457f5657-73c2-4fda-bca4-8b538fdba9ca": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "4723f450-0b79-4b1a-895e-e8e86a28b56c": {
+    "width": 12.5,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "4a7251ed-ed9a-4b53-9e55-02d3db67c33f": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "4a8ef080-89e7-4742-8d46-087fbe7edc0e": {
+    "width": 12.5,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "50898f5c-bb81-46cb-b502-119b90405c05": {
+    "width": 13.2,
+    "thickness": 2.2,
+    "height": 18.4
+  },
+  "50e56e77-f4a8-42cc-be45-e5090dc5ed10": {
+    "width": 12,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "51f91cb8-c0d4-43e9-8135-bd92c490d22f": {
+    "width": 13,
+    "thickness": 1.6,
+    "height": 18.1
+  },
+  "54b6ab20-0487-4d99-86dc-dc192d709855": {
+    "width": 13.2,
+    "thickness": 1.7,
+    "height": 18.2
+  },
+  "54c2cfeb-a048-4e92-a8ee-48333619e8bc": {
+    "width": 12.3,
+    "thickness": 3,
+    "height": 18.3
+  },
+  "563079a7-284b-440d-bda2-df029479780e": {
+    "width": 12.2,
+    "thickness": 2.9,
+    "height": 18.2
+  },
+  "56bbfebd-48c1-4338-8c3a-1bf9beae8b2d": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "573317e0-a596-4b0c-9637-8dcfd1c2e6f5": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "5a54e99c-23f7-4826-9e72-00d811dd2294": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "5cd0b586-f75b-484c-85cb-3169aeabcfb5": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "5f970805-8bb2-4136-b3fc-f3d76f410a50": {
+    "width": 12,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "61dd8bc8-01f3-4165-b175-96e55164f05e": {
+    "width": 12.5,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "635152bb-9e2a-4910-9c6e-0d6d895ed4bc": {
+    "width": 12,
+    "thickness": 3,
+    "height": 18
+  },
+  "67e40518-5320-4c51-bf97-aacfa6bc1ae4": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "69a91934-1d36-4c69-baf1-2c0f5ac16713": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "6b034448-be9e-4cfc-9c72-0e88040424a7": {
+    "width": 12,
+    "thickness": 3.5,
+    "height": 18
+  },
+  "6e1b66b0-8f69-4e5f-8825-8dcb5708a0ec": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "744bad31-c572-403a-b510-d3d370a9a6ca": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "768a91db-33d2-4a7e-a1b4-5080a7063947": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "76eb965c-89c4-45ad-8b6b-9194d82ef251": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "79e9a73c-c27c-4f71-a93d-00e0a09a3d2f": {
+    "width": 12.6,
+    "thickness": 1.7,
+    "height": 18.4
+  },
+  "7f4a0b6b-83e4-40b6-964a-210b78932682": {
+    "width": 12,
+    "thickness": 3,
+    "height": 18
+  },
+  "825ae415-8845-496a-bc2c-2c20669597d7": {
+    "width": 13.3,
+    "thickness": 2.2,
+    "height": 18.4
+  },
+  "832fd916-3599-4495-80e9-3d0d5e2292d3": {
+    "width": 13.1,
+    "thickness": 1.7,
+    "height": 18.2
+  },
+  "8594566b-58ab-4010-a692-82c16dc3fb7b": {
+    "width": 13,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "88887877-fff0-4026-877b-8499f1ee2cc5": {
+    "width": 12,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "8cf8aa35-7065-42b1-8be5-564a69b75962": {
+    "width": 12.5,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "8d781843-b97f-4afa-b81b-678779555dc8": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "8e326210-28df-48ef-b3d2-996fc3bb755d": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "909177c9-ce63-41d3-a564-da46d74fd5bf": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "93f57af2-5476-4256-9231-f5f96080a3cd": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "9a07be68-0799-417e-8ca1-0f1d9bd5e387": {
+    "width": 12.5,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "9c1381df-7def-4384-aef1-482911fbcfcb": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "9d77bf49-88bc-46ed-a903-7c85e6124720": {
+    "width": 12.2,
+    "thickness": 3,
+    "height": 18
+  },
+  "9fdb054c-ea18-4ba7-913b-0e77e7eaf3b7": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "a0d4328b-6428-47bc-9a4c-1df43bec6c89": {
+    "width": 12.5,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "a2a7ced3-1323-447f-9cc9-83cab4fb8c34": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "a5bdb052-d801-4b1e-a8b2-29e6c0d21fe4": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "a6613d60-aa53-41ce-a3c2-3ca2df8255ef": {
+    "width": 12.8,
+    "thickness": 1.7,
+    "height": 18
+  },
+  "a9ee3a4c-17f8-4d7d-8f99-adf92755407a": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "aaec9c7c-dfb4-4dbd-84d0-1284ef0f1328": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "af618f1d-be63-415d-86d3-c0674df07eea": {
+    "width": 12.1,
+    "thickness": 2.8,
+    "height": 18
+  },
+  "b101668f-5ad8-4225-9898-7565b299cf3c": {
+    "width": 12.7,
+    "thickness": 1.7,
+    "height": 18.2
+  },
+  "b33f05c7-6aaa-45a3-bc05-ed9e0fda4126": {
+    "width": 12,
+    "thickness": 3.1,
+    "height": 18
+  },
+  "b4a0cf60-2ff2-41ea-9556-b1cafdbbf685": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "ba46bbae-588a-4065-ade5-1fb5224070c1": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "bb5240ea-24e6-4c50-9414-d229ed00d85e": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "bff8177a-ede0-47c6-95d0-371ca0f35c89": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "c1fb33b8-2f98-4293-8494-7afde898b3ec": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "c27e34ee-a9b2-4a66-92c6-63bbc860bdca": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "c46515f2-f95f-4fe8-9056-427223d979ce": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "c6b8b078-b979-4664-a0c0-911c4c333ffb": {
+    "width": 12,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "c8ea114b-1cf7-4086-bb8c-f46c499c5f9c": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "c97e950e-ba5f-4e09-8f13-76d5401323ed": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "c9cea31e-2b40-49ba-a249-cb09d8cb2d20": {
+    "width": 12.5,
+    "thickness": 1.8,
+    "height": 18
+  },
+  "cb208b54-d9e5-4d8a-9e6e-1d187c349213": {
+    "width": 12,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "cb4d4584-e642-428c-8c82-f69e7165daba": {
+    "width": 12,
+    "thickness": 3,
+    "height": 18
+  },
+  "cb9533ce-ee85-4408-881e-c9f1bb726dd0": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "ceb0cea2-f236-4f52-b149-2409a3c44d7c": {
+    "width": 12,
+    "thickness": 1.6,
+    "height": 18
+  },
+  "d1f4c780-b47e-4bc9-b9a4-96cf265b1dc3": {
+    "width": 12.5,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "d6db34e2-1c19-4dc9-ada1-bad27cc05b4b": {
+    "width": 12.5,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "d720a1b2-5e6d-4bc6-aa9f-9b3e8a1f0b59": {
+    "width": 12,
+    "thickness": 1.6,
+    "height": 18
+  },
+  "d7d5cd33-94da-4af6-858e-5bf55dc51bbd": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "d9f7e488-6157-4d18-b93a-433534905a8d": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "db4e04f0-dd3f-49b6-b966-4e0dde7864f0": {
+    "width": 12.5,
+    "thickness": 1.7,
+    "height": 18
+  },
+  "de386666-467c-4d26-995f-1615ef06f36e": {
+    "width": 12.5,
+    "thickness": 1.7,
+    "height": 18
+  },
+  "df17d5be-e93d-41d0-bec8-7303b0d45289": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "dff0bf7f-5a94-4321-bd60-2589f8e4a6f1": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "e070f65c-510d-4386-b573-fdf04282bb1d": {
+    "width": 13.2,
+    "thickness": 1.8,
+    "height": 18.4
+  },
+  "e207c8ea-715e-4f66-a694-1434d93b6280": {
+    "width": 12,
+    "thickness": 3,
+    "height": 18
+  },
+  "e553b1c5-272b-4d99-9223-430e8375c911": {
+    "width": 12,
+    "thickness": 1.5,
+    "height": 18
+  },
+  "e9850097-dd98-4624-ae80-11b1031ae353": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "ec6d1d68-0534-4c56-882e-adcb6f45534e": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "f28145ff-3b1d-4b76-b3c3-17ba9a4cd6f8": {
+    "width": 12.5,
+    "thickness": 1.7,
+    "height": 18
+  },
+  "f3fe0f50-7604-463c-9429-54496d144a05": {
+    "width": 13.1,
+    "thickness": 1.9,
+    "height": 18.2
+  },
+  "f406e29f-25e3-4116-93f9-0da77e78c2c5": {
+    "width": 12.8,
+    "thickness": 1.7,
+    "height": 18.2
+  },
+  "f646e337-e312-4d5c-a660-cd315bd14449": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "f6dc0c2e-3137-42d1-a513-9b7a9e03cd3c": {
+    "width": 12,
+    "thickness": 3.2,
+    "height": 18
+  },
+  "f98c110f-cb5c-4398-959f-2e65347e4b69": {
+    "width": 12.9,
+    "thickness": 1.7,
+    "height": 18.3
+  },
+  "f9c7ec25-f8bd-4f70-86dc-86e924e219ba": {
+    "width": 12.3,
+    "thickness": 1.4,
+    "height": 18
+  }
+}

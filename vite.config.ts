@@ -1,6 +1,11 @@
+import vue from "@vitejs/plugin-vue";
 import { defineConfig } from "vite-plus";
 
 export default defineConfig({
+  plugins: [vue()],
+  test: {
+    include: ["src/**/*.test.ts", "scripts/**/*.test.ts"],
+  },
   staged: {
     "*": "vp check --fix",
   },

@@ -14,17 +14,18 @@ Ce document couvre le POC : un échantillon de 234 tomes, le temps qu'Hugo fasse
 
 Les mesures intérieures ne sont publiées nulle part. Valeurs par défaut estimées, toutes modifiables dans l'appli (choix du builder, à faire mesurer par Hugo) :
 
-| Réglage                                               | Défaut |
-| ----------------------------------------------------- | ------ |
-| Largeur intérieure                                    | 76 cm  |
-| Profondeur intérieure                                 | 26 cm  |
-| Hauteur intérieure                                    | 190 cm |
-| Épaisseur d'une planche                               | 1,6 cm |
-| Hauteur du dessous de la planche fixe, depuis le fond | 74 cm  |
-| Pas des trous de taquets                              | 3,2 cm |
-| Hauteur de la marche                                  | 6 cm   |
-| Marge au-dessus du plus grand tome                    | 1,5 cm |
-| Marge de largeur par rangée                           | 1 cm   |
+| Réglage                                           | Défaut |
+| ------------------------------------------------- | ------ |
+| Largeur intérieure                                | 76 cm  |
+| Profondeur intérieure                             | 26 cm  |
+| Hauteur intérieure                                | 190 cm |
+| Épaisseur d'une planche                           | 1,6 cm |
+| Fond de la Billy, depuis le sol (mesuré, environ) | 10 cm  |
+| Dessus de la planche fixe, depuis le sol (mesuré) | 106 cm |
+| Pas des trous de taquets                          | 3,2 cm |
+| Hauteur de la marche                              | 6 cm   |
+| Marge au-dessus du plus grand tome                | 1,5 cm |
+| Marge de largeur par rangée                       | 1 cm   |
 
 ## Règles de rangement (décidées par Hugo)
 
@@ -112,6 +113,7 @@ Vue 3 avec TypeScript sur le projet Vite+ existant (`vp dev`, `vp test`, `vp che
 8. Les couvertures viennent de Manga Collec. Elles s'affichent dans le plan à suivre (couverture du premier tome de chaque plage) et au survol d'un tome.
 9. L'appli s'ouvre sur la collection complète. `?collection=echantillon` ouvre l'échantillon.
 10. Amazon affiche un captcha après ~110 pages. `node scripts/fetch-dimensions.ts --one-per-edition` charge un seul tome par édition sans dimension.
+11. Hugo mesure depuis le sol : le réglage de la planche fixe et les hauteurs affichées donnent le dessus de chaque planche, depuis le sol.
 
 ## Reste à faire (relevé par la revue de code)
 

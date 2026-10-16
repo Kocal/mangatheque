@@ -1,9 +1,15 @@
 import { describe, expect, test } from "vite-plus/test";
 import { computeLayout, splitLongUnits } from "./layout.ts";
-import { DEFAULT_SETTINGS } from "./settings.ts";
+import { DEFAULT_SETTINGS, zoneHeights } from "./settings.ts";
 import { makeUnit } from "./test-helpers.ts";
 
-const settings = { ...DEFAULT_SETTINGS, innerWidth: 76, rowSlack: 1 };
+const settings = {
+  ...DEFAULT_SETTINGS,
+  innerWidth: 76,
+  rowSlack: 1,
+  baseHeight: 0,
+  fixedShelfTop: 74 + DEFAULT_SETTINGS.shelfThickness,
+};
 
 const shape = (layout: ReturnType<typeof computeLayout>) =>
   layout.bookcases.map((bookcase) =>
@@ -62,7 +68,12 @@ describe("computeLayout", () => {
   });
 
   test("respects the lower zone height", () => {
-    const short = { ...settings, bookcaseCount: 2, innerHeight: 60, fixedShelfHeight: 24 };
+    const short = {
+      ...settings,
+      bookcaseCount: 2,
+      innerHeight: 60,
+      fixedShelfTop: 24 + settings.shelfThickness,
+    };
 
     const layout = computeLayout([makeUnit("a", 40, 1.5), makeUnit("long", 60, 1.5)], short);
 
@@ -77,7 +88,7 @@ describe("computeLayout", () => {
       ...settings,
       bookcaseCount: 1,
       innerHeight: 400,
-      fixedShelfHeight: 200,
+      fixedShelfTop: 200 + settings.shelfThickness,
       maxShelves: 3,
     };
     const tooDeepForDoubleRows = { width: 15 };
@@ -127,7 +138,7 @@ describe("computeLayout", () => {
 
     const [top, under] = layout.bookcases[0].compartments;
     expect(top.bottom + top.height).toBeCloseTo(settings.innerHeight);
-    expect(under.bottom).toBeCloseTo(settings.fixedShelfHeight + settings.shelfThickness);
+    expect(under.bottom).toBeCloseTo(zoneHeights(settings).lower + settings.shelfThickness);
     expect(under.height).toBeGreaterThanOrEqual(under.neededHeight);
   });
 
@@ -164,7 +175,7 @@ describe("computeLayout regressions", () => {
   });
 
   test("keeps compartments inside the bookcase when the fixed shelf is set above the top", () => {
-    const layout = computeLayout([makeUnit("a", 40, 1.5)], { ...settings, fixedShelfHeight: 300 });
+    const layout = computeLayout([makeUnit("a", 40, 1.5)], { ...settings, fixedShelfTop: 300 });
 
     for (const c of layout.bookcases.flatMap((b) => b.compartments)) {
       expect(c.bottom).toBeGreaterThanOrEqual(0);

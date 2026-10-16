@@ -23,13 +23,13 @@ const rowsOf = (front: Row, back: Row | null) =>
     <section v-for="bookcase in bookcases" :key="bookcase.index" class="card">
       <h3>Billy {{ bookcase.index + 1 }}</h3>
       <p class="shelves">
-        Planches, dessous depuis le fond :
+        Dessus des planches, depuis le sol :
         <span
           v-for="(shelf, i) in shelfPositions(bookcase, settings)"
           :key="i"
           :class="{ fixed: shelf.fixed }"
         >
-          {{ cm(shelf.position) }} cm<template v-if="shelf.fixed"> (fixe)</template>
+          {{ cm(shelf.top) }} cm<template v-if="shelf.fixed"> (fixe)</template>
         </span>
       </p>
       <p v-if="bookcase.compartments.length === 0" class="empty">Vide</p>

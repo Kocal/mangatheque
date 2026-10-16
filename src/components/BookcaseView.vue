@@ -19,17 +19,16 @@ const emit = defineEmits<{ hover: [book: Book | null] }>();
 
 const SIDE = 1.8;
 const TOP = 1.6;
-const OUTER_HEIGHT = 202;
 const BOOK_GAP = 0.06;
 const ROW_OFFSET = 0.4;
 const LABEL_MARGIN = 10;
 
-const plinth = computed(() => Math.max(2, OUTER_HEIGHT - TOP - props.settings.innerHeight));
 const outerWidth = computed(() => props.settings.innerWidth + 2 * SIDE);
-const outerHeight = computed(() => TOP + props.settings.innerHeight + plinth.value);
+const outerHeight = computed(() => TOP + props.settings.innerHeight + props.settings.baseHeight);
 const interiorBottom = computed(() => TOP + props.settings.innerHeight);
 
 const y = (fromBottom: number) => interiorBottom.value - fromBottom;
+const fromFloor = (height: number) => y(height - props.settings.baseHeight);
 
 const shelves = computed(() => shelfPositions(props.bookcase, props.settings));
 
@@ -128,7 +127,7 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
         class="shelf"
         :class="{ fixed: shelf.fixed }"
         :x="SIDE"
-        :y="y(shelf.position + settings.shelfThickness)"
+        :y="fromFloor(shelf.top)"
         :width="settings.innerWidth"
         :height="settings.shelfThickness"
       />
@@ -136,7 +135,7 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
         v-if="shelf.fixed"
         class="fixed-label"
         :x="outerWidth - SIDE - 0.6"
-        :y="y(shelf.position) - 0.35"
+        :y="fromFloor(shelf.top - settings.shelfThickness) - 0.35"
       >
         PLANCHE FIXE
       </text>
@@ -144,16 +143,16 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
         class="tick"
         :x1="outerWidth"
         :x2="outerWidth + 0.8"
-        :y1="y(shelf.position + settings.shelfThickness / 2)"
-        :y2="y(shelf.position + settings.shelfThickness / 2)"
+        :y1="fromFloor(shelf.top - settings.shelfThickness / 2)"
+        :y2="fromFloor(shelf.top - settings.shelfThickness / 2)"
       />
       <text
         class="height-label"
         :class="{ fixed: shelf.fixed }"
         :x="outerWidth + 1.2"
-        :y="y(shelf.position + settings.shelfThickness / 2) + 0.9"
+        :y="fromFloor(shelf.top - settings.shelfThickness / 2) + 0.9"
       >
-        {{ cm(shelf.position) }}
+        {{ cm(shelf.top) }}
       </text>
     </g>
     <g v-for="(row, i) in rows" :key="`compartment-${i}`">

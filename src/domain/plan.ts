@@ -60,19 +60,21 @@ export function shelvesUsed(bookcase: BookcaseLayout): number {
 }
 
 export interface ShelfPosition {
-  position: number;
+  top: number;
   fixed: boolean;
 }
 
 export function shelfPositions(bookcase: BookcaseLayout, settings: Settings): ShelfPosition[] {
+  const topFromFloor = (underside: number) =>
+    Math.round((settings.baseHeight + underside + settings.shelfThickness) * 10) / 10;
   const movable = (["upper", "lower"] as const).flatMap((zone) =>
     bookcase.compartments
       .filter((c) => c.zone === zone)
       .slice(1)
-      .map((c) => ({ position: Math.round((c.bottom + c.height) * 10) / 10, fixed: false })),
+      .map((c) => ({ top: topFromFloor(c.bottom + c.height), fixed: false })),
   );
-  return [...movable, { position: zoneHeights(settings).lower, fixed: true }].sort(
-    (a, b) => a.position - b.position,
+  return [...movable, { top: topFromFloor(zoneHeights(settings).lower), fixed: true }].sort(
+    (a, b) => a.top - b.top,
   );
 }
 

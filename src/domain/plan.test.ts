@@ -95,6 +95,13 @@ describe("bookGroups", () => {
 });
 
 describe("shelfPositions", () => {
+  const MEASURED = {
+    ...DEFAULT_SETTINGS,
+    innerHeight: 190,
+    shelfThickness: 1.6,
+    baseHeight: 10,
+    fixedShelfTop: 106,
+  };
   const row = { books: [], width: 0, maxHeight: 0, maxDepth: 0 };
   const compartment = (zone: "upper" | "lower", bottom: number, height: number) => ({
     bookcase: 0,
@@ -106,27 +113,27 @@ describe("shelfPositions", () => {
     bottom,
   });
 
-  test("lists the underside of every shelf from the floor, fixed one included", () => {
+  test("lists the top of every shelf from the floor, fixed one included", () => {
     const bookcase: BookcaseLayout = {
       index: 0,
       compartments: [
-        compartment("upper", 133.2, 56.8),
-        compartment("upper", 75.6, 56),
-        compartment("lower", 35.2, 38.8),
-        compartment("lower", 0, 33.6),
+        compartment("upper", 140, 50),
+        compartment("upper", 96, 42.4),
+        compartment("lower", 41.6, 52.8),
+        compartment("lower", 0, 40),
       ],
     };
 
-    expect(shelfPositions(bookcase, DEFAULT_SETTINGS)).toEqual([
-      { position: 33.6, fixed: false },
-      { position: 74, fixed: true },
-      { position: 131.6, fixed: false },
+    expect(shelfPositions(bookcase, MEASURED)).toEqual([
+      { top: 51.6, fixed: false },
+      { top: 106, fixed: true },
+      { top: 150, fixed: false },
     ]);
   });
 
   test("lists only the fixed shelf for an empty bookcase", () => {
-    expect(shelfPositions({ index: 0, compartments: [] }, DEFAULT_SETTINGS)).toEqual([
-      { position: 74, fixed: true },
+    expect(shelfPositions({ index: 0, compartments: [] }, MEASURED)).toEqual([
+      { top: 106, fixed: true },
     ]);
   });
 });

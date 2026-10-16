@@ -185,8 +185,8 @@ const hoverText = computed(() => {
             @hover="hovered = $event"
           />
           <figcaption>
-            {{ shelvesUsed(focused) }} planches · hauteurs en cm · flèches gauche et droite pour
-            changer de Billy, Échap pour revenir
+            {{ shelvesUsed(focused) }} planches · hauteurs en cm depuis le sol · flèches gauche et
+            droite pour changer de Billy, Échap pour revenir
           </figcaption>
         </figure>
         <PlanList
@@ -215,7 +215,7 @@ const hoverText = computed(() => {
           Billy {{ bookcase.index + 1 }} · {{ shelvesUsed(bookcase) }} planche{{
             shelvesUsed(bookcase) > 1 ? "s" : ""
           }}
-          · hauteurs en cm
+          · hauteurs en cm depuis le sol
         </figcaption>
       </figure>
     </section>

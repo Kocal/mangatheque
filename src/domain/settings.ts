@@ -2,8 +2,9 @@ export interface Settings {
   innerWidth: number;
   innerDepth: number;
   innerHeight: number;
+  baseHeight: number;
   shelfThickness: number;
-  fixedShelfHeight: number;
+  fixedShelfTop: number;
   holePitch: number;
   riserHeight: number;
   headroom: number;
@@ -16,7 +17,8 @@ export type Zone = "upper" | "lower";
 
 export function zoneHeights(settings: Settings): Record<Zone, number> {
   const room = Math.max(0, settings.innerHeight - settings.shelfThickness);
-  const lower = Math.min(Math.max(0, settings.fixedShelfHeight), room);
+  const fixedUnderside = settings.fixedShelfTop - settings.shelfThickness - settings.baseHeight;
+  const lower = Math.min(Math.max(0, fixedUnderside), room);
   return { upper: room - lower, lower };
 }
 
@@ -24,8 +26,9 @@ export const DEFAULT_SETTINGS: Settings = {
   innerWidth: 76,
   innerDepth: 26,
   innerHeight: 190,
+  baseHeight: 10,
   shelfThickness: 1.6,
-  fixedShelfHeight: 74,
+  fixedShelfTop: 106,
   holePitch: 3.2,
   riserHeight: 6,
   headroom: 1.5,

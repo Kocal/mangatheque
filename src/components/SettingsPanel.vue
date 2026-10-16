@@ -9,9 +9,10 @@ const FIELDS: { key: keyof Settings; label: string; unit: string; step: number }
   { key: "innerWidth", label: "Largeur intérieure", unit: "cm", step: 0.1 },
   { key: "innerDepth", label: "Profondeur intérieure", unit: "cm", step: 0.1 },
   { key: "innerHeight", label: "Hauteur intérieure", unit: "cm", step: 0.1 },
+  { key: "baseHeight", label: "Fond de la Billy, depuis le sol", unit: "cm", step: 0.1 },
   {
-    key: "fixedShelfHeight",
-    label: "Dessous de la planche fixe, depuis le fond",
+    key: "fixedShelfTop",
+    label: "Dessus de la planche fixe, depuis le sol",
     unit: "cm",
     step: 0.1,
   },

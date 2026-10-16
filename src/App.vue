@@ -153,6 +153,7 @@ const hoverText = computed(() => {
           Billy {{ bookcase.index + 1 }} · {{ shelvesUsed(bookcase) }} planche{{
             shelvesUsed(bookcase) > 1 ? "s" : ""
           }}
+          · hauteurs en cm
         </figcaption>
       </figure>
     </section>
@@ -177,7 +178,7 @@ const hoverText = computed(() => {
         </button>
       </div>
     </div>
-    <PlanList :bookcases="planBookcases" @hover="planHover = $event" />
+    <PlanList :bookcases="planBookcases" :settings="settings" @hover="planHover = $event" />
 
     <aside v-if="showSettings" class="drawer" aria-label="Réglages">
       <div class="drawer-head">

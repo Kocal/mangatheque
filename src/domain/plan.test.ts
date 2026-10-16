@@ -1,6 +1,7 @@
 import { describe, expect, test } from "vite-plus/test";
 import type { BookcaseLayout } from "./layout.ts";
-import { bookGroups, describeBooks, shelvesUsed } from "./plan.ts";
+import { bookGroups, describeBooks, shelfPositions, shelvesUsed } from "./plan.ts";
+import { DEFAULT_SETTINGS } from "./settings.ts";
 import type { Book } from "./types.ts";
 
 function book(seriesTitle: string, number: number, editionTitle: string | null = null): Book {
@@ -89,6 +90,43 @@ describe("bookGroups", () => {
     expect(groups).toEqual([
       { seriesTitle: "Kingdom", text: "Kingdom 3 à 4", cover: "Kingdom-3.jpg", count: 2 },
       { seriesTitle: "Ajin", text: "Ajin 1", cover: "Ajin-1.jpg", count: 1 },
+    ]);
+  });
+});
+
+describe("shelfPositions", () => {
+  const row = { books: [], width: 0, maxHeight: 0, maxDepth: 0 };
+  const compartment = (zone: "upper" | "lower", bottom: number, height: number) => ({
+    bookcase: 0,
+    zone,
+    front: row,
+    back: null,
+    neededHeight: 20,
+    height,
+    bottom,
+  });
+
+  test("lists the underside of every shelf from the floor, fixed one included", () => {
+    const bookcase: BookcaseLayout = {
+      index: 0,
+      compartments: [
+        compartment("upper", 133.2, 56.8),
+        compartment("upper", 75.6, 56),
+        compartment("lower", 35.2, 38.8),
+        compartment("lower", 0, 33.6),
+      ],
+    };
+
+    expect(shelfPositions(bookcase, DEFAULT_SETTINGS)).toEqual([
+      { position: 33.6, fixed: false },
+      { position: 74, fixed: true },
+      { position: 131.6, fixed: false },
+    ]);
+  });
+
+  test("lists only the fixed shelf for an empty bookcase", () => {
+    expect(shelfPositions({ index: 0, compartments: [] }, DEFAULT_SETTINGS)).toEqual([
+      { position: 74, fixed: true },
     ]);
   });
 });

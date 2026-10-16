@@ -1,4 +1,6 @@
 import type { BookcaseLayout } from "./layout.ts";
+import { zoneHeights } from "./settings.ts";
+import type { Settings } from "./settings.ts";
 import type { Book } from "./types.ts";
 
 function ranges(numbers: number[]): string {
@@ -55,4 +57,21 @@ export function shelvesUsed(bookcase: BookcaseLayout): number {
     .map((zone) => bookcase.compartments.filter((c) => c.zone === zone).length)
     .reduce((sum, count) => sum + Math.max(0, count - 1), 0);
   return movable + 1;
+}
+
+export interface ShelfPosition {
+  position: number;
+  fixed: boolean;
+}
+
+export function shelfPositions(bookcase: BookcaseLayout, settings: Settings): ShelfPosition[] {
+  const movable = (["upper", "lower"] as const).flatMap((zone) =>
+    bookcase.compartments
+      .filter((c) => c.zone === zone)
+      .slice(1)
+      .map((c) => ({ position: Math.round((c.bottom + c.height) * 10) / 10, fixed: false })),
+  );
+  return [...movable, { position: zoneHeights(settings).lower, fixed: true }].sort(
+    (a, b) => a.position - b.position,
+  );
 }

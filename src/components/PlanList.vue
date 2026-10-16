@@ -1,9 +1,10 @@
 <script setup lang="ts">
 import type { Row } from "../domain/compartment.ts";
 import type { BookcaseLayout } from "../domain/layout.ts";
-import { bookGroups } from "../domain/plan.ts";
+import { bookGroups, shelfPositions } from "../domain/plan.ts";
+import type { Settings } from "../domain/settings.ts";
 
-defineProps<{ bookcases: BookcaseLayout[] }>();
+defineProps<{ bookcases: BookcaseLayout[]; settings: Settings }>();
 const emit = defineEmits<{ hover: [seriesTitle: string | null] }>();
 
 const cm = (value: number) => value.toLocaleString("fr-FR", { maximumFractionDigits: 1 });
@@ -21,6 +22,16 @@ const rowsOf = (front: Row, back: Row | null) =>
   <div class="plan">
     <section v-for="bookcase in bookcases" :key="bookcase.index" class="card">
       <h3>Billy {{ bookcase.index + 1 }}</h3>
+      <p class="shelves">
+        Planches, dessous depuis le fond :
+        <span
+          v-for="(shelf, i) in shelfPositions(bookcase, settings)"
+          :key="i"
+          :class="{ fixed: shelf.fixed }"
+        >
+          {{ cm(shelf.position) }} cm<template v-if="shelf.fixed"> (fixe)</template>
+        </span>
+      </p>
       <p v-if="bookcase.compartments.length === 0" class="empty">Vide</p>
       <ol v-else>
         <li v-for="(c, i) in bookcase.compartments" :key="i">
@@ -74,6 +85,25 @@ const rowsOf = (front: Row, back: Row | null) =>
 h3 {
   margin: 0 0 8px;
   font-size: 15px;
+}
+
+.shelves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.shelves span {
+  color: var(--text);
+}
+
+.shelves .fixed {
+  color: var(--accent);
+  font-weight: 600;
 }
 
 ol {

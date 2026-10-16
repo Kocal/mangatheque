@@ -3,7 +3,7 @@ import { computed } from "vue";
 import { backRowColor } from "../colors.ts";
 import type { Row } from "../domain/compartment.ts";
 import type { BookcaseLayout, Compartment } from "../domain/layout.ts";
-import { zoneHeights } from "../domain/settings.ts";
+import { shelfPositions } from "../domain/plan.ts";
 import type { Settings } from "../domain/settings.ts";
 import type { Book } from "../domain/types.ts";
 
@@ -21,6 +21,7 @@ const TOP = 1.6;
 const OUTER_HEIGHT = 202;
 const BOOK_GAP = 0.06;
 const ROW_OFFSET = 0.4;
+const LABEL_MARGIN = 10;
 
 const plinth = computed(() => Math.max(2, OUTER_HEIGHT - TOP - props.settings.innerHeight));
 const outerWidth = computed(() => props.settings.innerWidth + 2 * SIDE);
@@ -29,16 +30,9 @@ const interiorBottom = computed(() => TOP + props.settings.innerHeight);
 
 const y = (fromBottom: number) => interiorBottom.value - fromBottom;
 
-const fixedShelf = computed(() => zoneHeights(props.settings).lower);
+const shelves = computed(() => shelfPositions(props.bookcase, props.settings));
 
-const movableShelves = computed(() =>
-  (["upper", "lower"] as const).flatMap((zone) =>
-    props.bookcase.compartments
-      .filter((c) => c.zone === zone)
-      .slice(1)
-      .map((c) => c.bottom + c.height),
-  ),
-);
+const cm = (value: number) => value.toLocaleString("fr-FR", { maximumFractionDigits: 1 });
 
 interface Spine {
   book: Book;
@@ -100,7 +94,7 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
 <template>
   <svg
     class="bookcase"
-    :viewBox="`0 0 ${outerWidth} ${outerHeight}`"
+    :viewBox="`0 0 ${outerWidth + LABEL_MARGIN} ${outerHeight}`"
     role="img"
     :aria-label="`Billy ${bookcase.index + 1}`"
     @mouseover="onOver"
@@ -119,25 +113,39 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
       :width="settings.innerWidth"
       :height="settings.innerHeight"
     />
-    <rect
-      v-for="(shelf, i) in movableShelves"
-      :key="`shelf-${i}`"
-      class="shelf"
-      :x="SIDE"
-      :y="y(shelf + settings.shelfThickness)"
-      :width="settings.innerWidth"
-      :height="settings.shelfThickness"
-    />
-    <rect
-      class="shelf fixed"
-      :x="SIDE"
-      :y="y(fixedShelf + settings.shelfThickness)"
-      :width="settings.innerWidth"
-      :height="settings.shelfThickness"
-    />
-    <text class="fixed-label" :x="outerWidth - SIDE - 0.6" :y="y(fixedShelf) - 0.35">
-      PLANCHE FIXE
-    </text>
+    <g v-for="(shelf, i) in shelves" :key="`shelf-${i}`">
+      <rect
+        class="shelf"
+        :class="{ fixed: shelf.fixed }"
+        :x="SIDE"
+        :y="y(shelf.position + settings.shelfThickness)"
+        :width="settings.innerWidth"
+        :height="settings.shelfThickness"
+      />
+      <text
+        v-if="shelf.fixed"
+        class="fixed-label"
+        :x="outerWidth - SIDE - 0.6"
+        :y="y(shelf.position) - 0.35"
+      >
+        PLANCHE FIXE
+      </text>
+      <line
+        class="tick"
+        :x1="outerWidth"
+        :x2="outerWidth + 0.8"
+        :y1="y(shelf.position + settings.shelfThickness / 2)"
+        :y2="y(shelf.position + settings.shelfThickness / 2)"
+      />
+      <text
+        class="height-label"
+        :class="{ fixed: shelf.fixed }"
+        :x="outerWidth + 1.2"
+        :y="y(shelf.position + settings.shelfThickness / 2) + 0.9"
+      >
+        {{ cm(shelf.position) }}
+      </text>
+    </g>
     <g v-for="(row, i) in rows" :key="`compartment-${i}`">
       <rect v-if="row.riser" class="riser" v-bind="row.riser" />
       <g v-for="(layer, l) in row.layers" :key="l">
@@ -198,6 +206,22 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
   letter-spacing: 0.1px;
   text-anchor: end;
   fill: var(--billy-fixed-label);
+}
+
+.tick {
+  stroke: var(--muted);
+  stroke-width: 0.2;
+}
+
+.height-label {
+  font-size: 2.4px;
+  fill: var(--text);
+  font-variant-numeric: tabular-nums;
+}
+
+.height-label.fixed {
+  fill: var(--accent);
+  font-weight: 700;
 }
 
 .riser {

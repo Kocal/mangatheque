@@ -16,7 +16,7 @@ Les mesures intérieures ne sont publiées nulle part. Valeurs par défaut estim
 
 | Réglage                                           | Défaut |
 | ------------------------------------------------- | ------ |
-| Largeur intérieure                                | 76 cm  |
+| Largeur intérieure (mesurée)                      | 76 cm  |
 | Profondeur intérieure                             | 26 cm  |
 | Hauteur intérieure                                | 190 cm |
 | Épaisseur d'une planche                           | 1,6 cm |
@@ -114,6 +114,7 @@ Vue 3 avec TypeScript sur le projet Vite+ existant (`vp dev`, `vp test`, `vp che
 9. L'appli s'ouvre sur la collection complète. `?collection=echantillon` ouvre l'échantillon.
 10. Amazon affiche un captcha après ~110 pages. `node scripts/fetch-dimensions.ts --one-per-edition` charge un seul tome par édition sans dimension.
 11. Hugo mesure depuis le sol : le réglage de la planche fixe et les hauteurs affichées donnent le dessus de chaque planche, depuis le sol.
+12. Les mesures prises à la main sont dans `src/data/measures.ts`, par série, et par édition si besoin. Elles passent devant Amazon et les estimations. Un tome reste hachuré tant qu'une de ses trois dimensions est estimée.
 
 ## Reste à faire (relevé par la revue de code)
 

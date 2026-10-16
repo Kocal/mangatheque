@@ -174,6 +174,36 @@ describe("buildUnits", () => {
     });
   });
 
+  test("applies a hand measure to every volume of the series, over Amazon", () => {
+    const dims = { "Ashita no Joe-1": { width: 12.9, thickness: 1.7, height: 18.3 } };
+    const measures = [{ series: "Ashita no Joe", thickness: 2.5 }];
+
+    const [unit] = buildUnits(collection(series("Ashita no Joe", "Shōnen", 2)), dims, [], measures);
+
+    expect(unit.books.map((b) => b.dims)).toEqual([
+      { width: 12.9, thickness: 2.5, height: 18.3 },
+      { width: 12.9, thickness: 2.5, height: 18.3 },
+    ]);
+    expect(unit.books.map((b) => b.estimated)).toEqual([false, true]);
+    expect(unit.thickness).toBeCloseTo(5);
+  });
+
+  test("stops estimating a volume once all its dimensions are measured by hand", () => {
+    const measures = [{ series: "Monster", width: 12, thickness: 2, height: 19 }];
+
+    const [unit] = buildUnits(collection(series("Monster", "Seinen", 1)), {}, [], measures);
+
+    expect(unit.books[0].estimated).toBe(false);
+  });
+
+  test("limits a hand measure to the edition it names", () => {
+    const measures = [{ series: "Berserk", edition: "Deluxe", thickness: 4 }];
+
+    const [unit] = buildUnits(collection(series("Berserk", "Seinen", 1)), {}, [], measures);
+
+    expect(unit.books[0].dims.thickness).toBe(1.8);
+  });
+
   test("numbers series colors inside each group", () => {
     const c = collection(series("A", "Seinen"), series("B", "Seinen"), series("C", "Shōnen"));
 

@@ -7,6 +7,7 @@ import SettingsPanel from "./components/SettingsPanel.vue";
 import { useHighlightStyle } from "./composables/useHighlightStyle.ts";
 import { useSettings } from "./composables/useSettings.ts";
 import { COLLECTION, DIMENSIONS, SAMPLE, volumeCount } from "./data/library.ts";
+import { MEASURES } from "./data/measures.ts";
 import { UNIVERSES } from "./data/universes.ts";
 import { computeLayout } from "./domain/layout.ts";
 import { buildUnits } from "./domain/ordering.ts";
@@ -52,7 +53,7 @@ onMounted(() => window.addEventListener("keydown", onKey));
 onUnmounted(() => window.removeEventListener("keydown", onKey));
 
 const collection = computed(() => (dataset.value === "sample" ? SAMPLE : COLLECTION));
-const units = computed(() => buildUnits(collection.value, DIMENSIONS, UNIVERSES));
+const units = computed(() => buildUnits(collection.value, DIMENSIONS, UNIVERSES, MEASURES));
 const layout = computed(() => computeLayout(units.value, settings.value));
 
 const colors = computed(

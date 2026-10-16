@@ -6,10 +6,13 @@ import type {
   Dimensions,
   DimensionsCache,
   Edition,
+  Measure,
   Series,
   Unit,
   Universe,
 } from "./types.ts";
+
+const DIMENSION_KEYS = ["width", "thickness", "height"] as const;
 
 const collator = new Intl.Collator("fr", { sensitivity: "base", numeric: true });
 
@@ -83,9 +86,26 @@ function buildBlocks(collection: Collection, universes: Universe[]): Block[] {
   );
 }
 
-function booksOf(series: Series, dims: DimensionsCache): Book[] {
-  return series.editions.flatMap((edition) =>
-    [...edition.volumes]
+function handMeasure(series: Series, edition: Edition, measures: Measure[]): Partial<Dimensions> {
+  const hand: Partial<Dimensions> = {};
+  for (const measure of measures) {
+    const matches =
+      measure.series === series.title &&
+      (measure.edition === undefined || measure.edition === edition.title);
+    for (const key of DIMENSION_KEYS) {
+      if (matches && measure[key] !== undefined) {
+        hand[key] = measure[key];
+      }
+    }
+  }
+  return hand;
+}
+
+function booksOf(series: Series, dims: DimensionsCache, measures: Measure[]): Book[] {
+  return series.editions.flatMap((edition) => {
+    const hand = handMeasure(series, edition, measures);
+    const fullyMeasured = DIMENSION_KEYS.every((key) => hand[key] !== undefined);
+    return [...edition.volumes]
       .sort((a, b) => a.number - b.number)
       .map((volume) => {
         const known = dims[volume.id];
@@ -94,24 +114,25 @@ function booksOf(series: Series, dims: DimensionsCache): Book[] {
           seriesTitle: series.title,
           editionTitle: edition.title,
           number: volume.number,
-          dims: known ?? estimateDimensions(edition, dims),
-          estimated: !known,
+          dims: { ...(known ?? estimateDimensions(edition, dims)), ...hand },
+          estimated: !known && !fullyMeasured,
           cover: volume.imageUrl,
         };
-      }),
-  );
+      });
+  });
 }
 
 export function buildUnits(
   collection: Collection,
   dims: DimensionsCache,
   universes: Universe[],
+  measures: Measure[] = [],
 ): Unit[] {
   const colorCounters = new Map<Audience | null, number>();
 
   return buildBlocks(collection, universes).flatMap((block) =>
     block.members.map((series) => {
-      const books = booksOf(series, dims);
+      const books = booksOf(series, dims, measures);
       const colorIndex = colorCounters.get(block.audience) ?? 0;
       colorCounters.set(block.audience, colorIndex + 1);
       return {

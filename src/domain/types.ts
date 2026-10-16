@@ -37,6 +37,11 @@ export interface Dimensions {
 
 export type DimensionsCache = Record<string, Dimensions>;
 
+export interface Measure extends Partial<Dimensions> {
+  series: string;
+  edition?: string | null;
+}
+
 export interface Universe {
   name: string;
   series: string[];

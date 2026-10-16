@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from "vue";
-import { backRowColor } from "../colors.ts";
+import { backRowColor, textColorOn } from "../colors.ts";
 import type { Row } from "../domain/compartment.ts";
 import type { BookcaseLayout, Compartment } from "../domain/layout.ts";
-import { shelfPositions } from "../domain/plan.ts";
+import { shelfPositions, spineLabel } from "../domain/plan.ts";
 import type { Settings } from "../domain/settings.ts";
 import type { Book } from "../domain/types.ts";
 
@@ -12,6 +12,7 @@ const props = defineProps<{
   settings: Settings;
   colors: Map<string, string>;
   seriesIds: Map<string, number>;
+  labels?: boolean;
 }>();
 
 const emit = defineEmits<{ hover: [book: Book | null] }>();
@@ -42,6 +43,13 @@ interface Spine {
   height: number;
   fill: string;
   series: number | undefined;
+  label: { text: string; size: number; ink: string } | null;
+}
+
+function labelFor(book: Book, fill: string): Spine["label"] {
+  const size = Math.min(1.1, (book.dims.thickness - BOOK_GAP) * 0.62);
+  const maxChars = Math.floor((book.dims.height - 1) / (size * 0.6));
+  return { text: spineLabel(book, maxChars), size, ink: textColorOn(fill) };
 }
 
 function spines(row: Row, floor: number, back: boolean): Spine[] {
@@ -56,6 +64,7 @@ function spines(row: Row, floor: number, back: boolean): Spine[] {
       height: book.dims.height,
       fill: back ? backRowColor(color) : color,
       series: props.seriesIds.get(book.seriesTitle),
+      label: props.labels ? labelFor(book, back ? backRowColor(color) : color) : null,
     };
     x += book.dims.thickness;
     return spine;
@@ -95,6 +104,7 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
   <svg
     class="bookcase"
     :viewBox="`0 0 ${outerWidth + LABEL_MARGIN} ${outerHeight}`"
+    :style="{ aspectRatio: `${outerWidth + LABEL_MARGIN} / ${outerHeight}` }"
     role="img"
     :aria-label="`Billy ${bookcase.index + 1}`"
     @mouseover="onOver"
@@ -171,6 +181,15 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
             :height="spine.height"
             :fill="`url(#${hatchId})`"
           />
+          <text
+            v-if="spine.label"
+            class="spine-label"
+            :transform="`translate(${spine.x + spine.width / 2} ${spine.y + 0.5}) rotate(90)`"
+            :font-size="spine.label.size"
+            :fill="spine.label.ink"
+          >
+            {{ spine.label.text }}
+          </text>
         </g>
       </g>
     </g>
@@ -230,6 +249,12 @@ const hatchId = computed(() => `hatch-${props.bookcase.index}`);
 
 .spine {
   cursor: pointer;
+}
+
+.spine-label {
+  dominant-baseline: central;
+  pointer-events: none;
+  font-weight: 600;
 }
 
 .hatch {

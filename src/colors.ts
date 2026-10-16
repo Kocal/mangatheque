@@ -33,3 +33,8 @@ export function backRowColor(color: string): string {
   const [, hue, saturation, lightness] = match.map(Number);
   return `hsl(${hue} ${Math.round(saturation * 0.85)}% ${Math.round(lightness * 0.62)}%)`;
 }
+
+export function textColorOn(color: string): string {
+  const lightness = Number(/^hsl\(\d+ \d+% (\d+)%\)$/.exec(color)?.[1] ?? 0);
+  return lightness > 55 ? "#1d1b18" : "#ffffff";
+}

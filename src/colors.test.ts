@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vite-plus/test";
-import { AUDIENCE_HUES, backRowColor, seriesColor } from "./colors.ts";
+import { AUDIENCE_HUES, backRowColor, seriesColor, textColorOn } from "./colors.ts";
 
 describe("seriesColor", () => {
   test("uses the hue of the audience", () => {
@@ -22,5 +22,15 @@ describe("backRowColor", () => {
 
   test("darkens a grey for the back row", () => {
     expect(backRowColor("hsl(0 0% 52%)")).toBe("hsl(0 0% 32%)");
+  });
+});
+
+describe("textColorOn", () => {
+  test("writes dark text on a light spine", () => {
+    expect(textColorOn("hsl(24 80% 63%)")).toBe("#1d1b18");
+  });
+
+  test("writes white text on a dark spine", () => {
+    expect(textColorOn("hsl(214 60% 40%)")).toBe("#ffffff");
   });
 });

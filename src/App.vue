@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, ref } from "vue";
+import { computed, onMounted, onUnmounted, ref } from "vue";
 import { seriesColor } from "./colors.ts";
 import BookcaseView from "./components/BookcaseView.vue";
 import PlanList from "./components/PlanList.vue";
@@ -31,9 +31,25 @@ const seriesIds = computed(() => {
 useHighlightStyle(
   computed(() => (highlighted.value === null ? undefined : seriesIds.value.get(highlighted.value))),
 );
-const planBookcases = computed(() =>
-  layout.value.bookcases.filter((b) => focus.value === null || b.index === focus.value),
+const focused = computed(() =>
+  focus.value === null ? null : (layout.value.bookcases[focus.value] ?? null),
 );
+
+function onKey(event: KeyboardEvent) {
+  if (focus.value === null || showSettings.value) {
+    return;
+  }
+  const last = layout.value.bookcases.length - 1;
+  if (event.key === "Escape") {
+    focus.value = null;
+  } else if (event.key === "ArrowRight") {
+    focus.value = Math.min(focus.value + 1, last);
+  } else if (event.key === "ArrowLeft") {
+    focus.value = Math.max(focus.value - 1, 0);
+  }
+}
+onMounted(() => window.addEventListener("keydown", onKey));
+onUnmounted(() => window.removeEventListener("keydown", onKey));
 
 const collection = computed(() => (dataset.value === "sample" ? SAMPLE : COLLECTION));
 const units = computed(() => buildUnits(collection.value, DIMENSIONS, UNIVERSES));
@@ -113,7 +129,7 @@ const hoverText = computed(() => {
       </div>
     </header>
 
-    <section class="stats">
+    <section v-if="!focused" class="stats">
       <div v-for="stat in stats" :key="stat.label" class="stat">
         <span class="stat-value">{{ stat.value }}</span>
         <span class="stat-label">{{ stat.label }}</span>
@@ -135,12 +151,58 @@ const hoverText = computed(() => {
       </p>
     </div>
 
-    <section class="stage">
+    <section v-if="focused" class="focus-mode">
+      <div class="focus-head">
+        <h2>Billy {{ focused.index + 1 }}</h2>
+        <div class="focus-nav">
+          <button
+            type="button"
+            class="ghost"
+            :disabled="focused.index === 0"
+            @click="focus = focused.index - 1"
+          >
+            ‹ Précédente
+          </button>
+          <button type="button" class="ghost" @click="focus = null">Toutes les Billy</button>
+          <button
+            type="button"
+            class="ghost"
+            :disabled="focused.index === layout.bookcases.length - 1"
+            @click="focus = focused.index + 1"
+          >
+            Suivante ›
+          </button>
+        </div>
+      </div>
+      <div class="focus-body">
+        <figure class="focus-figure">
+          <BookcaseView
+            :bookcase="focused"
+            :settings="settings"
+            :colors="colors"
+            :series-ids="seriesIds"
+            labels
+            @hover="hovered = $event"
+          />
+          <figcaption>
+            {{ shelvesUsed(focused) }} planches · hauteurs en cm · flèches gauche et droite pour
+            changer de Billy, Échap pour revenir
+          </figcaption>
+        </figure>
+        <PlanList
+          class="focus-plan"
+          :bookcases="[focused]"
+          :settings="settings"
+          @hover="planHover = $event"
+        />
+      </div>
+    </section>
+
+    <section v-else class="stage">
       <figure
         v-for="bookcase in layout.bookcases"
         :key="bookcase.index"
-        :class="{ muted: focus !== null && focus !== bookcase.index }"
-        @click="focus = focus === bookcase.index ? null : bookcase.index"
+        @click="focus = bookcase.index"
       >
         <BookcaseView
           :bookcase="bookcase"
@@ -163,22 +225,22 @@ const hoverText = computed(() => {
       <p>{{ describeBooks(layout.overflow).join(" · ") }}</p>
     </section>
 
-    <div class="plan-head">
-      <h2>Plan à suivre</h2>
-      <div class="segmented" role="group" aria-label="Billy affichée">
-        <button type="button" :class="{ on: focus === null }" @click="focus = null">Toutes</button>
-        <button
-          v-for="bookcase in layout.bookcases"
-          :key="bookcase.index"
-          type="button"
-          :class="{ on: focus === bookcase.index }"
-          @click="focus = bookcase.index"
-        >
-          Billy {{ bookcase.index + 1 }}
-        </button>
+    <template v-if="!focused">
+      <div class="plan-head">
+        <h2>Plan à suivre</h2>
+        <div class="segmented" role="group" aria-label="Ranger une Billy">
+          <button
+            v-for="bookcase in layout.bookcases"
+            :key="bookcase.index"
+            type="button"
+            @click="focus = bookcase.index"
+          >
+            Ranger la Billy {{ bookcase.index + 1 }}
+          </button>
+        </div>
       </div>
-    </div>
-    <PlanList :bookcases="planBookcases" :settings="settings" @hover="planHover = $event" />
+      <PlanList :bookcases="layout.bookcases" :settings="settings" @hover="planHover = $event" />
+    </template>
 
     <aside v-if="showSettings" class="drawer" aria-label="Réglages">
       <div class="drawer-head">
@@ -283,6 +345,11 @@ h2 {
 }
 
 .toolbar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 8px 0;
+  background: var(--bg);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -347,10 +414,6 @@ figcaption {
   color: var(--muted);
 }
 
-figure.muted {
-  opacity: 0.35;
-}
-
 .hover-cover {
   flex: none;
   width: 34px;
@@ -384,6 +447,70 @@ figure.muted {
 
 .plan-head h2 {
   margin: 0;
+}
+
+.focus-mode {
+  margin-top: 8px;
+}
+
+.focus-head {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8px 16px;
+  margin-bottom: 12px;
+}
+
+.focus-head h2 {
+  margin: 0;
+}
+
+.focus-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.focus-nav button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.focus-body {
+  display: grid;
+  grid-template-columns: minmax(0, 760px) minmax(300px, 1fr);
+  gap: 20px;
+  align-items: start;
+}
+
+.focus-figure {
+  margin: 0;
+  cursor: default;
+}
+
+.focus-figure :deep(.bookcase) {
+  width: 100%;
+  height: auto;
+}
+
+.focus-plan {
+  position: sticky;
+  top: 84px;
+  grid-template-columns: 1fr;
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+
+@media (max-width: 800px) {
+  .focus-body {
+    grid-template-columns: 1fr;
+  }
+
+  .focus-plan {
+    position: static;
+    max-height: none;
+  }
 }
 
 .overflow {

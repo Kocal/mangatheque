@@ -1,6 +1,6 @@
 import { describe, expect, test } from "vite-plus/test";
 import type { BookcaseLayout } from "./layout.ts";
-import { bookGroups, describeBooks, shelfPositions, shelvesUsed } from "./plan.ts";
+import { bookGroups, describeBooks, shelfPositions, shelvesUsed, spineLabel } from "./plan.ts";
 import { DEFAULT_SETTINGS } from "./settings.ts";
 import type { Book } from "./types.ts";
 
@@ -128,5 +128,19 @@ describe("shelfPositions", () => {
     expect(shelfPositions({ index: 0, compartments: [] }, DEFAULT_SETTINGS)).toEqual([
       { position: 74, fixed: true },
     ]);
+  });
+});
+
+describe("spineLabel", () => {
+  test("puts the volume number before the title", () => {
+    expect(spineLabel(book("Kingdom", 12), 20)).toBe("12 · Kingdom");
+  });
+
+  test("shows only the title of a one-shot", () => {
+    expect(spineLabel(book("Adieu Eri", 0), 20)).toBe("Adieu Eri");
+  });
+
+  test("cuts a label longer than the spine", () => {
+    expect(spineLabel(book("Les Carnets de l'Apothicaire", 3), 12)).toBe("3 · Les Car…");
   });
 });

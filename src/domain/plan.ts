@@ -75,3 +75,8 @@ export function shelfPositions(bookcase: BookcaseLayout, settings: Settings): Sh
     (a, b) => a.position - b.position,
   );
 }
+
+export function spineLabel(book: Book, maxChars: number): string {
+  const text = book.number === 0 ? book.seriesTitle : `${book.number} · ${book.seriesTitle}`;
+  return text.length > maxChars ? `${text.slice(0, Math.max(0, maxChars - 1))}…` : text;
+}

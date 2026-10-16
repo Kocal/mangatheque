@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vite-plus/test";
-import { extractServerData, toCollection } from "./mangacollec.ts";
+import { extractServerData, fromApiResponse, toCollection } from "./mangacollec.ts";
 
 const store = {
   series: {
@@ -117,5 +117,20 @@ describe("extractServerData", () => {
 
   test("throws when the page has no server data", () => {
     expect(() => extractServerData("<html></html>")).toThrow();
+  });
+});
+
+describe("fromApiResponse", () => {
+  test("reads the logged-in API response like the public page", () => {
+    const api = {
+      series: Object.values(store.series.data),
+      editions: Object.values(store.editions.data),
+      volumes: Object.values(store.volumes.data),
+      possessions: store.publicCollection.kocal[0][1],
+    };
+
+    expect(fromApiResponse("kocal", api, kinds, "now")).toEqual(
+      toCollection("kocal", store, kinds, "now"),
+    );
   });
 });

@@ -54,6 +54,22 @@ export function extractServerData(html: string): { token: string; store: unknown
   return { token: session.access_token, store: readJsonLine(html, "DATA_STORE") };
 }
 
+interface Tables {
+  series: Record<string, RawSeries>;
+  editions: Record<string, RawEdition>;
+  volumes: Record<string, RawVolume>;
+}
+
+interface ApiResponse {
+  series: RawSeries[];
+  editions: RawEdition[];
+  volumes: RawVolume[];
+  possessions: { volume_id: string }[];
+}
+
+const byId = <T extends { id: string }>(rows: T[]): Record<string, T> =>
+  Object.fromEntries(rows.map((row) => [row.id, row]));
+
 export function toCollection(
   user: string,
   rawStore: unknown,
@@ -65,14 +81,43 @@ export function toCollection(
   if (!owned) {
     throw new Error(`Collection de ${user} introuvable dans la page`);
   }
+  const tables = {
+    series: store.series.data,
+    editions: store.editions.data,
+    volumes: store.volumes.data,
+  };
+  return buildCollection(user, tables, owned, kinds, fetchedAt);
+}
 
+export function fromApiResponse(
+  user: string,
+  rawResponse: unknown,
+  kinds: Kind[],
+  fetchedAt: string,
+): Collection {
+  const api = rawResponse as ApiResponse;
+  const tables = {
+    series: byId(api.series),
+    editions: byId(api.editions),
+    volumes: byId(api.volumes),
+  };
+  return buildCollection(user, tables, api.possessions, kinds, fetchedAt);
+}
+
+function buildCollection(
+  user: string,
+  tables: Tables,
+  owned: { volume_id: string }[],
+  kinds: Kind[],
+  fetchedAt: string,
+): Collection {
   const kindTitles = new Map(kinds.map((k) => [k.id, k.title]));
   const seriesById = new Map<string, Series>();
 
   for (const { volume_id } of owned) {
-    const volume = store.volumes.data[volume_id];
-    const edition = store.editions.data[volume.edition_id];
-    const raw = store.series.data[edition.series_id];
+    const volume = tables.volumes[volume_id];
+    const edition = tables.editions[volume.edition_id];
+    const raw = tables.series[edition.series_id];
 
     let series = seriesById.get(raw.id);
     if (!series) {

@@ -1,6 +1,6 @@
 {
   "user": "kocal",
-  "fetchedAt": "2026-10-16T18:45:20.576Z",
+  "fetchedAt": "2026-10-16T19:34:00.915Z",
   "series": [
     {
       "id": "75b19855-1948-4dca-9827-337af59699d2",
@@ -176,40 +176,6 @@
               "isbn": "9782382124758",
               "asin": "238212475X",
               "imageUrl": "https://m.media-amazon.com/images/I/41y69Tw+x7L.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "1b4673d8-9d09-44d6-861d-5a8222f3cbbc",
-      "title": "Anonyme !",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "942f4954-696b-4a56-af69-89d836fadc0d",
-          "title": null,
-          "volumes": [
-            {
-              "id": "f5eda6bf-6b8a-43e6-98f0-ad479f2df59c",
-              "number": 1,
-              "isbn": "9782302081802",
-              "asin": "2302081803",
-              "imageUrl": "https://m.media-amazon.com/images/I/51xvgpt6wPL.jpg"
-            },
-            {
-              "id": "e89f9c12-0c07-4890-b8d5-c3ae55889937",
-              "number": 2,
-              "isbn": "9782302090323",
-              "asin": "2302090322",
-              "imageUrl": "https://m.media-amazon.com/images/I/513xiNWOsxL.jpg"
-            },
-            {
-              "id": "faf498aa-ccbd-4833-97c9-6da33644859b",
-              "number": 3,
-              "isbn": "9782302090491",
-              "asin": "2302090497",
-              "imageUrl": "https://m.media-amazon.com/images/I/51fdK7MQaaL.jpg"
             }
           ]
         }
@@ -397,6 +363,20 @@
               "isbn": "9782382813447",
               "asin": "238281344X",
               "imageUrl": "https://m.media-amazon.com/images/I/41AMLZcFVFL.jpg"
+            },
+            {
+              "id": "aab90b10-89c1-4b92-80e6-ea3e43702414",
+              "number": 28,
+              "isbn": "9782382815915",
+              "asin": "2382815914",
+              "imageUrl": "https://m.media-amazon.com/images/I/41q9F7vIKpL.jpg"
+            },
+            {
+              "id": "cb80a371-16b2-41c7-844a-2bc12ac27c2a",
+              "number": 29,
+              "isbn": "9782382818626",
+              "asin": "238281862X",
+              "imageUrl": "https://m.media-amazon.com/images/I/51Uw4cZiPsL.jpg"
             }
           ]
         }
@@ -1194,6 +1174,13 @@
               "isbn": "9782811687540",
               "asin": "2811687548",
               "imageUrl": "https://m.media-amazon.com/images/I/514R+OtyRQL.jpg"
+            },
+            {
+              "id": "4258ad2b-b844-457e-89c8-e9f1a6526f2f",
+              "number": 27,
+              "isbn": "9782811696733",
+              "asin": "2811696733",
+              "imageUrl": "https://m.media-amazon.com/images/I/51tlY0PU0EL.jpg"
             }
           ]
         }
@@ -1852,89 +1839,6 @@
               "isbn": "9782505068402",
               "asin": "2505068402",
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51buBHqU2tL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "ad89be7a-060f-43c5-852b-f2335fff4fad",
-      "title": "Dead tube",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "c4d92743-d36d-44a7-a801-d7c75ab74f38",
-          "title": null,
-          "volumes": [
-            {
-              "id": "303fff0c-bc93-44e2-b234-aebef085fc59",
-              "number": 1,
-              "isbn": "9782756076478",
-              "asin": "2756076473",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51g6QT6UuFL.jpg"
-            },
-            {
-              "id": "0d14831e-b325-4190-a3d1-a08aaff6a256",
-              "number": 2,
-              "isbn": "9782756081014",
-              "asin": "2756081019",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61Osf33obML.jpg"
-            },
-            {
-              "id": "2d6c6619-5dee-48a5-ad6a-6aabda2ef4f7",
-              "number": 3,
-              "isbn": "9782756082721",
-              "asin": "2756082724",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61FRZGZ-FRL.jpg"
-            },
-            {
-              "id": "4e0b1ad6-4e4b-4362-be50-a8ad2c9a6c8a",
-              "number": 4,
-              "isbn": "9782756086828",
-              "asin": "2756086827",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51-%2Bik72yJL.jpg"
-            },
-            {
-              "id": "721ccd84-35cc-47af-868d-acc44bede548",
-              "number": 5,
-              "isbn": "9782756095158",
-              "asin": "275609515X",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51xnB29RamL.jpg"
-            },
-            {
-              "id": "c8ddb01b-6436-41ff-bd01-a89c08c8c5bd",
-              "number": 6,
-              "isbn": "9782413000716",
-              "asin": "2413000712",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Ad0oUEfBL.jpg"
-            },
-            {
-              "id": "3ae8ede7-12ff-4adb-b87e-bb0b23f019c3",
-              "number": 7,
-              "isbn": "9782413002123",
-              "asin": "241300212X",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61yGWLmmEiL.jpg"
-            },
-            {
-              "id": "9baf3c4f-29a5-482f-aa42-5ff972030132",
-              "number": 8,
-              "isbn": "9782413009818",
-              "asin": "2413009817",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51FbnuKtZfL.jpg"
-            },
-            {
-              "id": "fd3fad91-8dff-4532-b499-c51b6f3ba83b",
-              "number": 9,
-              "isbn": "9782413010753",
-              "asin": "2413010750",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51bI7x9QQhL.jpg"
-            },
-            {
-              "id": "a98cfef0-d455-4b25-8802-c63af215bf22",
-              "number": 10,
-              "isbn": "9782413016984",
-              "asin": "2413016988",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51nviojikiL.jpg"
             }
           ]
         }
@@ -2617,6 +2521,20 @@
               "isbn": "9782505084761",
               "asin": "2505084769",
               "imageUrl": "https://m.media-amazon.com/images/I/410GumhQ-eL.jpg"
+            },
+            {
+              "id": "81dc1aa5-a9da-4b48-ab15-b98492b98923",
+              "number": 105,
+              "isbn": "9782505132776",
+              "asin": "2505132771",
+              "imageUrl": "https://m.media-amazon.com/images/I/41sp-c+8cHL.jpg"
+            },
+            {
+              "id": "2f86e57a-518c-4d36-b40d-58364e3f70ce",
+              "number": 106,
+              "isbn": "9782505133629",
+              "asin": "250513362X",
+              "imageUrl": "https://m.media-amazon.com/images/I/41CVApdUeSL.jpg"
             }
           ]
         }
@@ -2720,41 +2638,20 @@
       ]
     },
     {
-      "id": "7d1797a2-6c79-464b-80f6-54ceb8f68745",
-      "title": "Doubt",
+      "id": "b8d791fb-53ed-4464-ad59-3d35468bd41d",
+      "title": "DOGA of the Great Arch",
       "audience": "Seinen",
       "editions": [
         {
-          "id": "16548168-c244-4c16-bb6b-4196cb964f02",
+          "id": "70b34b2a-dee0-42fc-aec1-192e84848ca8",
           "title": null,
           "volumes": [
             {
-              "id": "d318c4a5-ff8c-4784-b78b-fa50ea6bcd90",
+              "id": "0a9cbf20-bfaf-4f9e-8fa7-33ad05bb4e1f",
               "number": 1,
-              "isbn": "9782355920851",
-              "asin": "2355920850",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61JXZSqWu9L.jpg"
-            },
-            {
-              "id": "8c263aa9-4048-4181-95da-70e96278fe50",
-              "number": 2,
-              "isbn": "9782355921100",
-              "asin": "2355921105",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51S50Lp5iXL.jpg"
-            },
-            {
-              "id": "6cd6b153-3109-4e3b-a829-a0b4ba0b50b4",
-              "number": 3,
-              "isbn": "9782355921285",
-              "asin": "2355921288",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61NWsZmq2IL.jpg"
-            },
-            {
-              "id": "616707ef-6e42-4720-819d-20d1d13e21ff",
-              "number": 4,
-              "isbn": "9782355921681",
-              "asin": "2355921687",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51vsUDE-IuL.jpg"
+              "isbn": "9791032716991",
+              "asin": "B0CRXKSVN1",
+              "imageUrl": "https://m.media-amazon.com/images/I/51t5AYkASFL.jpg"
             }
           ]
         }
@@ -3025,47 +2922,6 @@
       ]
     },
     {
-      "id": "77468a1c-a44f-4346-a8d3-8c094aae4254",
-      "title": "Fate/Apocrypha",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "a5a3c6b7-509b-4baf-ae7d-2539c4774b6f",
-          "title": null,
-          "volumes": [
-            {
-              "id": "bace1d7c-9c74-46bd-aa51-5b5a7ff33df3",
-              "number": 1,
-              "isbn": "9782377170654",
-              "asin": "237717065X",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51wxqZzeHPL.jpg"
-            },
-            {
-              "id": "effd215e-8586-4e7e-8f80-4258b19438ff",
-              "number": 2,
-              "isbn": "9782377170746",
-              "asin": "2377170749",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51stU8Hh3oL.jpg"
-            },
-            {
-              "id": "a1f63f8a-54ec-4244-a114-63f8879ab058",
-              "number": 3,
-              "isbn": "9782377171019",
-              "asin": "237717101X",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61SfqeGZH6L.jpg"
-            },
-            {
-              "id": "08a3c58e-252b-4096-9095-ded0e9b2a505",
-              "number": 4,
-              "isbn": "9782377171774",
-              "asin": "237717177X",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51k%2BDT9iXaL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "6e597b11-79b9-41a4-a4ef-80ce1cc2d63d",
       "title": "Fire Force",
       "audience": "Shōnen",
@@ -3234,6 +3090,33 @@
               "isbn": "9782505113454",
               "asin": "2505113459",
               "imageUrl": "https://m.media-amazon.com/images/I/510tXj8eXUL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e38b6fcb-e681-4d8f-8e96-e1d3892170ba",
+      "title": "From the Children's Country",
+      "audience": "Shōnen",
+      "editions": [
+        {
+          "id": "a64d90a3-6e5f-4d8f-8ace-62cc827706dc",
+          "title": null,
+          "volumes": [
+            {
+              "id": "a634c8f5-8db0-4cfd-a7f1-9f93a0f2d295",
+              "number": 1,
+              "isbn": "9782382753965",
+              "asin": "238275396X",
+              "imageUrl": "https://m.media-amazon.com/images/I/51-8MN9jotL.jpg"
+            },
+            {
+              "id": "6ebe80ba-4789-49dd-9f32-4d10148388ce",
+              "number": 2,
+              "isbn": "9782382753972",
+              "asin": "2382753978",
+              "imageUrl": "https://m.media-amazon.com/images/I/51qSqjAhl9L.jpg"
             }
           ]
         }
@@ -3748,54 +3631,6 @@
               "isbn": "9782372877039",
               "asin": "2372877038",
               "imageUrl": "https://m.media-amazon.com/images/I/51jUUv23gtL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "86b0f923-5639-41d8-8671-3da080430c4e",
-      "title": "Gleipnir",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "87254f39-36f1-4f9f-bf0a-b24dc7192728",
-          "title": null,
-          "volumes": [
-            {
-              "id": "0c350945-d16f-4b71-9af3-752e92a38a52",
-              "number": 1,
-              "isbn": "9782505069966",
-              "asin": "2505069964",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51VTxwBTm5L.jpg"
-            },
-            {
-              "id": "d8cf948a-fbcb-441a-9fb1-c3ff9b742606",
-              "number": 2,
-              "isbn": "9782505069973",
-              "asin": "2505069972",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51qct16fSYL.jpg"
-            },
-            {
-              "id": "1e8d63c3-dca9-4d69-b5f3-8fff4eceba18",
-              "number": 3,
-              "isbn": "9782505070702",
-              "asin": "2505070709",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51waspeaZ0L.jpg"
-            },
-            {
-              "id": "70dc0465-d583-4e38-be3d-6adc1f45a699",
-              "number": 4,
-              "isbn": "9782505071983",
-              "asin": "2505071985",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51-DCCzv6mL.jpg"
-            },
-            {
-              "id": "ae0a8161-9cd4-457b-88cd-eab14864bdf5",
-              "number": 5,
-              "isbn": "9782505076315",
-              "asin": "2505076316",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51QT%2BapQUoL.jpg"
             }
           ]
         }
@@ -4646,61 +4481,6 @@
       ]
     },
     {
-      "id": "2dce70cc-64b7-4893-847a-d2c7142bac1f",
-      "title": "Judge",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "6562c830-9575-47d2-b8da-f3c8c77e73a2",
-          "title": null,
-          "volumes": [
-            {
-              "id": "c1d65139-9d26-4ba3-b951-20b37b376ceb",
-              "number": 1,
-              "isbn": "9782355922824",
-              "asin": "2355922829",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51ScSYPKPsL.jpg"
-            },
-            {
-              "id": "2ff6a172-5e0c-43e2-86a0-efb90fe17121",
-              "number": 2,
-              "isbn": "9782355923067",
-              "asin": "235592306X",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61hqPq3hHiL.jpg"
-            },
-            {
-              "id": "a43df42e-4def-4280-8206-660618ef7983",
-              "number": 3,
-              "isbn": "9782355923357",
-              "asin": "2355923353",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61Z%2BBBuEV-L.jpg"
-            },
-            {
-              "id": "07f42922-5df4-4534-bcde-795ae00197d3",
-              "number": 4,
-              "isbn": "9782355923746",
-              "asin": "2355923744",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Rgs6OmwsL.jpg"
-            },
-            {
-              "id": "09da54c5-43c1-4888-bd16-ab020cf4c0f3",
-              "number": 5,
-              "isbn": "9782355924156",
-              "asin": "2355924155",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61rnJoaHvCL.jpg"
-            },
-            {
-              "id": "1601c17d-47ee-4fa3-9402-4f845695e9a7",
-              "number": 6,
-              "isbn": "9782355924774",
-              "asin": "2355924775",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51-Dqq5eUUL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "b38e2bf6-72bb-4928-8eef-f1b9304affaf",
       "title": "Jusqu'à ce que nos os pourrissent",
       "audience": "Shōnen",
@@ -5005,198 +4785,6 @@
               "isbn": "9782505063575",
               "asin": "2505063575",
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61k%2BDDCvGHL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "dccc2f61-de41-487d-8eeb-a9cae4bc013c",
-      "title": "King's Game",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "fd39d140-a942-4dac-8c36-4a43ad449842",
-          "title": null,
-          "volumes": [
-            {
-              "id": "d0bba374-f81b-4f0a-9e5d-665f9b44afed",
-              "number": 1,
-              "isbn": "9782355924903",
-              "asin": "2355924902",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51amV-2cvwL.jpg"
-            },
-            {
-              "id": "558d6491-148e-4d7c-b921-296287045226",
-              "number": 2,
-              "isbn": "9782355925153",
-              "asin": "2355925151",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51UpssgLp6L.jpg"
-            },
-            {
-              "id": "91eff725-0d11-4a3e-926f-c3eb7178dc7d",
-              "number": 3,
-              "isbn": "9782355925382",
-              "asin": "2355925380",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51wJp6ixJGL.jpg"
-            },
-            {
-              "id": "7ad2ce20-b91a-4106-b5f9-bbbb710ceea7",
-              "number": 4,
-              "isbn": "9782355925849",
-              "asin": "2355925844",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51v8--pndRL.jpg"
-            },
-            {
-              "id": "0e60124d-15bf-43c5-a342-eaabd85d4aef",
-              "number": 5,
-              "isbn": "9782355926303",
-              "asin": "2355926301",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/412wSKAaJKL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "3fca3b5e-e1be-4f3c-ac3c-0fb4fae1abf0",
-      "title": "King's Game Extreme",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "f550f797-37ae-4eba-8302-eb31d7758904",
-          "title": null,
-          "volumes": [
-            {
-              "id": "c9c7a5b0-7504-4c58-8a7b-c1335f7669af",
-              "number": 1,
-              "isbn": "9782355926297",
-              "asin": "2355926298",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51eye38BJTL.jpg"
-            },
-            {
-              "id": "dfddbf67-b5e7-4b95-91db-a93e814560c2",
-              "number": 2,
-              "isbn": "9782355926518",
-              "asin": "2355926514",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51LnIAz5WnL.jpg"
-            },
-            {
-              "id": "656d583b-9a78-4507-b8b9-f63c12c1ef23",
-              "number": 3,
-              "isbn": "9782355926808",
-              "asin": "2355926808",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51MOTbl2XtL.jpg"
-            },
-            {
-              "id": "c5013785-da6b-478e-a8b8-ee3b0a748566",
-              "number": 4,
-              "isbn": "9782355927348",
-              "asin": "2355927340",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51smcFIDp4L.jpg"
-            },
-            {
-              "id": "43f1f111-ddbd-4618-a710-7d3293e58682",
-              "number": 5,
-              "isbn": "9782355927775",
-              "asin": "2355927774",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51fZAT5kntL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "a428b24a-9898-4a16-b801-f56a62dcc326",
-      "title": "King's Game Origin",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "9c4d2c72-23c4-4b53-bc18-831ea8651b9a",
-          "title": null,
-          "volumes": [
-            {
-              "id": "f2a653a4-9d0c-4976-9590-fcf978283fb3",
-              "number": 1,
-              "isbn": "9782355927782",
-              "asin": "2355927782",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51XbHxbCkeL.jpg"
-            },
-            {
-              "id": "8b9cdaff-318d-4e65-ac12-a9dc26239ef6",
-              "number": 2,
-              "isbn": "9782355928017",
-              "asin": "2355928010",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51cu4rKyYDL.jpg"
-            },
-            {
-              "id": "6607da02-429a-4a56-bd53-724f1fc3bbda",
-              "number": 3,
-              "isbn": "9782355928253",
-              "asin": "2355928258",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51V0PXAoN8L.jpg"
-            },
-            {
-              "id": "b915f395-2c08-454c-9136-f4183b916443",
-              "number": 4,
-              "isbn": "9782355928772",
-              "asin": "2355928770",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61T4JI8AsmL.jpg"
-            },
-            {
-              "id": "c830bb76-9c84-404a-995f-a32f0c931eb9",
-              "number": 5,
-              "isbn": "9782355929151",
-              "asin": "2355929157",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61WTJd9VMkL.jpg"
-            },
-            {
-              "id": "78b6a4f6-5c88-4521-9f3f-792ba8206611",
-              "number": 6,
-              "isbn": "9782355929618",
-              "asin": "2355929610",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61Qy8vXZFbL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "7016b479-49c8-49ec-80e0-eab4e8a12e0f",
-      "title": "King's Game Spiral",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "9b97cefc-9a82-4a50-9102-dbbbece18b3c",
-          "title": null,
-          "volumes": [
-            {
-              "id": "ce6b3b9f-b1fe-4801-947c-1ab321e4bd98",
-              "number": 1,
-              "isbn": "9782355929625",
-              "asin": "2355929629",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61Jci%2BFhGJL.jpg"
-            },
-            {
-              "id": "7f366827-b0c4-4149-8c85-1a03fb57519e",
-              "number": 2,
-              "isbn": "9782355929793",
-              "asin": "2355929793",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61PyR2pTeoL.jpg"
-            },
-            {
-              "id": "a36dbe24-1c15-4023-910a-df7b66c74982",
-              "number": 3,
-              "isbn": "9782355929991",
-              "asin": "2355929998",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61mM90s2FSL.jpg"
-            },
-            {
-              "id": "97578bf1-a91e-411c-aaf4-012a26d7aba7",
-              "number": 4,
-              "isbn": "9791032700815",
-              "asin": "B06WLP6F33",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/614kQ9MBAEL.jpg"
             }
           ]
         }
@@ -5996,33 +5584,6 @@
       ]
     },
     {
-      "id": "767ed14f-7ca6-4529-9c7c-03a740daa2bd",
-      "title": "L'Homme qui tua Nobunaga",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "f0a26dfc-c99e-4508-8093-f9563c433425",
-          "title": null,
-          "volumes": [
-            {
-              "id": "b6df91b1-3a27-44be-bb43-21dd00c4a3f1",
-              "number": 1,
-              "isbn": "9782413028123",
-              "asin": "2413028129",
-              "imageUrl": "https://m.media-amazon.com/images/I/51oEcmJUTDL.jpg"
-            },
-            {
-              "id": "d7c68e0e-7068-4469-9b80-845899b36ea1",
-              "number": 2,
-              "isbn": "9782413028130",
-              "asin": "2413028137",
-              "imageUrl": "https://m.media-amazon.com/images/I/51uqDO2pvtL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "a7d42c46-a8e6-42a0-865c-0071b62212c8",
       "title": "La Déchéance d'un Homme",
       "audience": "Seinen",
@@ -6299,6 +5860,13 @@
               "isbn": "9791032717158",
               "asin": "B0CW5W4CMQ",
               "imageUrl": "https://m.media-amazon.com/images/I/51TDNqtXWjL.jpg"
+            },
+            {
+              "id": "4c39b1d8-5b7c-46c6-80bb-372bafdb6280",
+              "number": 14,
+              "isbn": "9791032717189",
+              "asin": "B0D8WKK49P",
+              "imageUrl": "https://m.media-amazon.com/images/I/51zxFBAWsSL.jpg"
             }
           ]
         }
@@ -6568,54 +6136,6 @@
       ]
     },
     {
-      "id": "ed5e62a1-cfb6-4b1f-9488-9d7e7656600a",
-      "title": "Les Mémoires de Vanitas",
-      "audience": "Shōnen",
-      "editions": [
-        {
-          "id": "704f25ea-7f71-468f-aef9-c6164cd64bbd",
-          "title": null,
-          "volumes": [
-            {
-              "id": "5ba2c343-8728-4399-a9f7-d05930889f97",
-              "number": 1,
-              "isbn": "9791032701218",
-              "asin": "B01MYFLN02",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61LctqvXlsL.jpg"
-            },
-            {
-              "id": "0d5941ba-88d2-4d26-81fd-cf15a2a523d6",
-              "number": 2,
-              "isbn": "9791032701300",
-              "asin": "B0719J14NZ",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61pJcJFV-dL.jpg"
-            },
-            {
-              "id": "7a6445db-c363-41cc-ba99-e030ec561bd9",
-              "number": 3,
-              "isbn": "9791032701461",
-              "asin": "B073L91FTH",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61NqZrFswwL.jpg"
-            },
-            {
-              "id": "f3a057c4-e8e5-4ad3-9556-b32f806e6481",
-              "number": 4,
-              "isbn": "9791032702185",
-              "asin": "B076M71NT5",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/6187khyoxnL.jpg"
-            },
-            {
-              "id": "fb4454fe-7cdb-4ec2-8e17-5b0d6a8a353c",
-              "number": 5,
-              "isbn": "9791032702741",
-              "asin": "B07B658B5B",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61gKxPvtW4L.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "12b38507-c517-4dd8-b216-5f23a017c73d",
       "title": "Les Sorcières de la fin du monde",
       "audience": "Josei",
@@ -6650,97 +6170,20 @@
       ]
     },
     {
-      "id": "5fb0e9aa-2b51-43ac-9c75-90c8257f85e3",
-      "title": "Made in Abyss",
-      "audience": "Seinen",
+      "id": "1c02309a-adf1-4b56-b4ae-68073a1850bf",
+      "title": "Magic Kaito",
+      "audience": "Shōnen",
       "editions": [
         {
-          "id": "b33202bb-230e-449e-af94-7768296679eb",
+          "id": "122d0905-9533-454f-aed9-3a6e979f5cde",
           "title": null,
           "volumes": [
             {
-              "id": "fb6bdc92-0cb1-4c78-bdc5-26c6b8bb5c0a",
+              "id": "3fab71e0-4dd0-40af-8e14-e74dc4274c07",
               "number": 1,
-              "isbn": "9782377171170",
-              "asin": "2377171176",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51psM2wIK8L.jpg"
-            },
-            {
-              "id": "a46e45b5-5541-4c0d-b25a-a80c00eb7f54",
-              "number": 2,
-              "isbn": "9782377171248",
-              "asin": "2377171249",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61s2jbZmOVL.jpg"
-            },
-            {
-              "id": "9afdfb5d-5cc1-475a-8274-f67c526be047",
-              "number": 3,
-              "isbn": "9782377171453",
-              "asin": "2377171451",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/511eBkp7h1L.jpg"
-            },
-            {
-              "id": "a701182f-5eab-4495-a8bb-9a9d0ca519d7",
-              "number": 4,
-              "isbn": "9782377171743",
-              "asin": "2377171745",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51lGm5AH%2BmL.jpg"
-            },
-            {
-              "id": "61dcb3de-bd4c-4dde-8c70-2a63cbeb89b9",
-              "number": 5,
-              "isbn": "9782377172009",
-              "asin": "2377172008",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Ql3PhIxiL.jpg"
-            },
-            {
-              "id": "4f998fbc-d672-4655-aa68-ff1bd978e301",
-              "number": 6,
-              "isbn": "9782377172252",
-              "asin": "2377172253",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51MXo9%2B8bzL.jpg"
-            },
-            {
-              "id": "0614aa8d-4217-48d5-82d5-0c9f6dfa9643",
-              "number": 7,
-              "isbn": "9782377172498",
-              "asin": "2377172490",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51HpHavQxJL.jpg"
-            },
-            {
-              "id": "aff2ae9e-cab5-44c5-88d9-6a1add9a71ca",
-              "number": 8,
-              "isbn": "9782377172870",
-              "asin": "2377172873",
-              "imageUrl": "https://m.media-amazon.com/images/I/51yIxn8HPzL.jpg"
-            },
-            {
-              "id": "e83bf4eb-ed69-4f2e-8c9f-a2b8fafcbbc1",
-              "number": 9,
-              "isbn": "9782377173662",
-              "asin": "2377173667",
-              "imageUrl": "https://m.media-amazon.com/images/I/51YTCZEd2xL.jpg"
-            },
-            {
-              "id": "e91f3cf5-f5ba-4bd1-acf3-8e6b1d7a136c",
-              "number": 10,
-              "isbn": "9782377174072",
-              "asin": "2377174078",
-              "imageUrl": "https://m.media-amazon.com/images/I/51fV9VRpe2L.jpg"
-            },
-            {
-              "id": "f34c6d49-bd1a-4512-9589-ee3dfc04530f",
-              "number": 11,
-              "isbn": "9782377175437",
-              "asin": "2377175430",
-              "imageUrl": "https://m.media-amazon.com/images/I/51Olc20+U9L.jpg"
-            },
-            {
-              "id": "e6e2b709-d615-4e4d-9d4a-8fb3764494a2",
-              "number": 12,
-              "isbn": "9782377175802",
-              "asin": "2377175805",
-              "imageUrl": "https://images.mangacollec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaEpJaWswWXpNME16YzBOaTB3WWprMkxUUm1NV1F0WVdZMllpMDNOemM0WkdJNU0yWmtNek1HT2daRlZBPT0iLCJleHAiOm51bGwsInB1ciI6ImJsb2JfaWQifX0=--0f6cf8dbb3433ea0c80536b1d2df22b898ffa048/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RkhKbGMybDZaVjkwYjE5c2FXMXBkRnNIYVFMMEFXa0M5QUU9IiwiZXhwIjpudWxsLCJwdXIiOiJ2YXJpYXRpb24ifX0=--f4740ce9863997714730d7d28982d4fbc8d883df/e6e2b709-d615-4e4d-9d4a-8fb3764494a2.jpg"
+              "isbn": "9782505060796",
+              "asin": "2505060797",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/517qDK82hCL.jpg"
             }
           ]
         }
@@ -7455,6 +6898,47 @@
       ]
     },
     {
+      "id": "e12a6896-2bce-4727-9c9f-4859613fffae",
+      "title": "Neon-genesis evangelion",
+      "audience": "Shōnen",
+      "editions": [
+        {
+          "id": "7aeeef15-2389-4d5b-981d-10b5edd765df",
+          "title": "Grand format",
+          "volumes": [
+            {
+              "id": "c8935e34-481b-41d5-96ba-d0577245c64e",
+              "number": 1,
+              "isbn": "9782344044728",
+              "asin": "2344044728",
+              "imageUrl": "https://m.media-amazon.com/images/I/514y3juYE7L.jpg"
+            },
+            {
+              "id": "b6dde48b-f4ca-4833-ac17-2da4257171ff",
+              "number": 2,
+              "isbn": "9782344048641",
+              "asin": "2344048642",
+              "imageUrl": "https://m.media-amazon.com/images/I/41+2UeouKnL.jpg"
+            },
+            {
+              "id": "a82b949c-24ab-418a-b082-f5bf34d0e23c",
+              "number": 3,
+              "isbn": "9782344048658",
+              "asin": "2344048650",
+              "imageUrl": "https://m.media-amazon.com/images/I/51OnQti4-8L.jpg"
+            },
+            {
+              "id": "759b460c-76e6-4228-b29a-05c347f06323",
+              "number": 4,
+              "isbn": "9782344048665",
+              "asin": "2344048669",
+              "imageUrl": "https://m.media-amazon.com/images/I/51f0aTIBddL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "1bdc5fe0-4ae3-4801-8101-1b29afe4e147",
       "title": "Neun",
       "audience": "Seinen",
@@ -7599,40 +7083,6 @@
               "isbn": "9782377171682",
               "asin": "2377171680",
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51C1yfrognL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "9dfc390b-7208-44dd-9e52-76c365e1f1d9",
-      "title": "Noise",
-      "audience": "Seinen",
-      "editions": [
-        {
-          "id": "8b5765f4-1b50-4fc2-bb6a-afbe05fee6f1",
-          "title": null,
-          "volumes": [
-            {
-              "id": "c6566808-e318-4c8e-b060-e4642f5de54c",
-              "number": 1,
-              "isbn": "9791032703113",
-              "asin": "B07DKWJWV3",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Km%2BeAWblL.jpg"
-            },
-            {
-              "id": "d77e3568-e663-4177-b043-36c1d140a779",
-              "number": 2,
-              "isbn": "9791032704042",
-              "asin": "B07MBJKPVW",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51zJCBnpDCL.jpg"
-            },
-            {
-              "id": "3e8336d7-a67c-4c32-a1d4-ccc3642bd824",
-              "number": 3,
-              "isbn": "9791032705148",
-              "asin": "B07TLP9HDL",
-              "imageUrl": "https://m.media-amazon.com/images/I/51hc0yQEjML.jpg"
             }
           ]
         }
@@ -8971,117 +8421,6 @@
       ]
     },
     {
-      "id": "5929fcfd-3794-4a36-a1f5-e38282cfbe35",
-      "title": "Real Account",
-      "audience": "Shōnen",
-      "editions": [
-        {
-          "id": "f5e81bc8-6ea4-482d-8c86-3a7426102ea3",
-          "title": null,
-          "volumes": [
-            {
-              "id": "9b2d5a09-d248-4196-8994-ab3f472421d0",
-              "number": 1,
-              "isbn": "9782368522936",
-              "asin": "236852293X",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51clK%2BOz1pL.jpg"
-            },
-            {
-              "id": "1a91f0d2-b3a9-455e-a431-ecc7492bd160",
-              "number": 2,
-              "isbn": "9782368523513",
-              "asin": "2368523510",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61uWoQzefFL.jpg"
-            },
-            {
-              "id": "3f959b0e-0a1c-4289-bcc4-747df383dc93",
-              "number": 3,
-              "isbn": "9782368523711",
-              "asin": "2368523715",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51GBEW4Qd8L.jpg"
-            },
-            {
-              "id": "1a7cb753-eab5-4d5e-8609-28d2952e00e1",
-              "number": 4,
-              "isbn": "9782368523728",
-              "asin": "2368523723",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61ACray1QEL.jpg"
-            },
-            {
-              "id": "c8738ae4-e016-420b-b49e-05551e72d32d",
-              "number": 5,
-              "isbn": "9782368525371",
-              "asin": "2368525378",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51XXCJ9lNBL.jpg"
-            },
-            {
-              "id": "a1cdf0ec-59c4-475d-a745-c0a03e544c1b",
-              "number": 6,
-              "isbn": "9782368525388",
-              "asin": "2368525386",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61bSiaCYiTL.jpg"
-            },
-            {
-              "id": "779314ce-2dcc-4c75-a160-da9542714504",
-              "number": 7,
-              "isbn": "9782368525395",
-              "asin": "2368525394",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51jteVo6T7L.jpg"
-            },
-            {
-              "id": "fe4ffaa0-6089-44e7-97ff-e251f50d0a96",
-              "number": 8,
-              "isbn": "9782368525401",
-              "asin": "2368525408",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61iLh-dCk7L.jpg"
-            },
-            {
-              "id": "7984f98d-3e74-41a4-a49d-e7fb4d3d4f35",
-              "number": 9,
-              "isbn": "9782368525418",
-              "asin": "2368525416",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61q2yiu5lTL.jpg"
-            },
-            {
-              "id": "fe2a599c-9900-4819-b73b-f9139bff01cb",
-              "number": 10,
-              "isbn": "9782368526200",
-              "asin": "236852620X",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61wGhUrtPXL.jpg"
-            },
-            {
-              "id": "f6c5edd8-ad8d-4207-9997-c500015225b8",
-              "number": 11,
-              "isbn": "9782368526217",
-              "asin": "2368526218",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51lCt9owlTL.jpg"
-            },
-            {
-              "id": "b52857f2-1723-46c3-9508-0ee72b068ab9",
-              "number": 12,
-              "isbn": "9782368526224",
-              "asin": "2368526226",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Mhh989bQL.jpg"
-            },
-            {
-              "id": "dcb22680-fe80-416a-bfbd-daf92b6d0c1d",
-              "number": 13,
-              "isbn": "9782368526231",
-              "asin": "2368526234",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51eygbFoHHL.jpg"
-            },
-            {
-              "id": "8f40b6d2-8ce6-4c3f-851e-5f0e927f3068",
-              "number": 14,
-              "isbn": "9782368526248",
-              "asin": "2368526242",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51hCjxn6R8L.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "832d49cc-6a2b-4746-8223-7308810d3bd7",
       "title": "Red Blue",
       "audience": "Shōnen",
@@ -9891,6 +9230,26 @@
       ]
     },
     {
+      "id": "95b8e2e1-60a6-4c32-92e4-bfa8b204f362",
+      "title": "Smoking behind the Supermarket with You",
+      "audience": "Seinen",
+      "editions": [
+        {
+          "id": "73400ad2-76eb-47ff-abdb-e362f98bb30d",
+          "title": null,
+          "volumes": [
+            {
+              "id": "475c4658-781e-49eb-a802-5183b775a60f",
+              "number": 1,
+              "isbn": "9782505123545",
+              "asin": "2505123543",
+              "imageUrl": "https://m.media-amazon.com/images/I/61xoaDP8ZEL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "d7270d2d-ccb9-4e31-93b1-24db52ee5b81",
       "title": "Solo Leveling",
       "audience": "Shōnen",
@@ -10283,6 +9642,40 @@
       ]
     },
     {
+      "id": "7834ce5c-0186-4a9e-ba92-79bda6a30593",
+      "title": "Vertical",
+      "audience": "Seinen",
+      "editions": [
+        {
+          "id": "3869dacf-301b-4d31-a6ef-39f688083e71",
+          "title": null,
+          "volumes": [
+            {
+              "id": "57750adb-7b3e-466c-90be-eff5a9c75f8f",
+              "number": 1,
+              "isbn": "9782723491952",
+              "asin": "2723491951",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51uLWBR56cL.jpg"
+            },
+            {
+              "id": "5b14caf8-f23c-4d51-964a-6e3cef4bdacf",
+              "number": 2,
+              "isbn": "9782723493406",
+              "asin": "2723493407",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51hMhv7U%2B0L.jpg"
+            },
+            {
+              "id": "f0cffb13-1de2-442f-9ca5-744c01f57feb",
+              "number": 3,
+              "isbn": "9782723493413",
+              "asin": "2723493415",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/515ok6u0-cL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "640916de-2128-4b72-a6ad-3531d4b8c608",
       "title": "Vigilante : My Hero Academia Illegals",
       "audience": "Shōnen",
@@ -10568,47 +9961,6 @@
               "isbn": "9782820327000",
               "asin": "2820327001",
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51S07Q4Yl%2BL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "f4cb14d9-5b24-4de3-a0af-499dd24a2c4f",
-      "title": "We never learn",
-      "audience": "Shōnen",
-      "editions": [
-        {
-          "id": "8aaf1040-b79a-4175-89c0-cf08a6879513",
-          "title": null,
-          "volumes": [
-            {
-              "id": "980e1531-83a6-4cd5-8f87-fdc2dc3ee6a5",
-              "number": 1,
-              "isbn": "9782820333216",
-              "asin": "2820333214",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Sn6ulflIL.jpg"
-            },
-            {
-              "id": "8a09fb0d-b5d6-496d-8474-f281f57995de",
-              "number": 2,
-              "isbn": "9782820333285",
-              "asin": "2820333281",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51zNNrbCd3L.jpg"
-            },
-            {
-              "id": "ff7b00a0-148a-4c3a-b9a6-d94ab1a4ccf6",
-              "number": 3,
-              "isbn": "9782820335227",
-              "asin": "2820335225",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51osycGxGjL.jpg"
-            },
-            {
-              "id": "cfc5c530-1df0-45f0-a166-953c7793ec3e",
-              "number": 4,
-              "isbn": "9782820335357",
-              "asin": "2820335357",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51lpsIoTKML.jpg"
             }
           ]
         }

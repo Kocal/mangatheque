@@ -1,6 +1,6 @@
 {
   "user": "kocal",
-  "fetchedAt": "2026-10-16T19:34:00.915Z",
+  "fetchedAt": "2026-10-16T22:14:37.899Z",
   "series": [
     {
       "id": "75b19855-1948-4dca-9827-337af59699d2",
@@ -1106,13 +1106,6 @@
               "imageUrl": "https://m.media-amazon.com/images/I/51o+1lzAA4L.jpg"
             },
             {
-              "id": "0cfbd450-cc35-4704-8475-3caf2447c656",
-              "number": 10,
-              "isbn": "9782811671303",
-              "asin": "2811671307",
-              "imageUrl": "https://m.media-amazon.com/images/I/51DMXc1i+PL.jpg"
-            },
-            {
               "id": "25dd1870-fe84-441f-9008-573c318662ca",
               "number": 11,
               "isbn": "9782811671310",
@@ -1162,18 +1155,39 @@
               "imageUrl": "https://m.media-amazon.com/images/I/51wGbY2OUuL.jpg"
             },
             {
-              "id": "eb2fcd32-60f3-4e34-a13c-d1d9e454676e",
-              "number": 18,
-              "isbn": "9782811685881",
-              "asin": "281168588X",
-              "imageUrl": "https://m.media-amazon.com/images/I/515ZsU+8PDL.jpg"
-            },
-            {
               "id": "94dc266d-7f5f-41d9-b738-28ee06ba7b8f",
               "number": 20,
               "isbn": "9782811687540",
               "asin": "2811687548",
               "imageUrl": "https://m.media-amazon.com/images/I/514R+OtyRQL.jpg"
+            },
+            {
+              "id": "b377c506-1781-49b2-a38e-8ac941044fe7",
+              "number": 22,
+              "isbn": "9782811687588",
+              "asin": "2811687580",
+              "imageUrl": "https://m.media-amazon.com/images/I/51mwwvxu-wL.jpg"
+            },
+            {
+              "id": "645c4d6d-e6cd-4fca-a75a-ec8a96cc948a",
+              "number": 23,
+              "isbn": "9782811687601",
+              "asin": "2811687602",
+              "imageUrl": "https://m.media-amazon.com/images/I/514ptFukD8L.jpg"
+            },
+            {
+              "id": "d0532cdf-e3d8-433e-b16a-136d49e9724a",
+              "number": 24,
+              "isbn": "9782811693893",
+              "asin": "2811693890",
+              "imageUrl": "https://m.media-amazon.com/images/I/41vZHFvXlOL.jpg"
+            },
+            {
+              "id": "0e43a15a-5e7d-41b9-89ee-e824936d814e",
+              "number": 25,
+              "isbn": "9782811696535",
+              "asin": "2811696539",
+              "imageUrl": "https://m.media-amazon.com/images/I/51s5RlNy8bL.jpg"
             },
             {
               "id": "4258ad2b-b844-457e-89c8-e9f1a6526f2f",
@@ -9336,11 +9350,39 @@
               "imageUrl": "https://m.media-amazon.com/images/I/51cUny9lT4L.jpg"
             },
             {
+              "id": "0ba2e9bf-783a-4849-9d4e-0d5fdc9e52ad",
+              "number": 12,
+              "isbn": "9782382882542",
+              "asin": "2382882549",
+              "imageUrl": "https://m.media-amazon.com/images/I/41Sv5VuADaL.jpg"
+            },
+            {
               "id": "20dbb05d-021b-41f4-b5a0-343844de358e",
               "number": 13,
               "isbn": "9782382882559",
               "asin": "2382882557",
               "imageUrl": "https://m.media-amazon.com/images/I/41UppHJVNCL.jpg"
+            },
+            {
+              "id": "1bc4708b-a561-4c7d-9e8c-d7febb81cccc",
+              "number": 14,
+              "isbn": "9782382882917",
+              "asin": "2382882913",
+              "imageUrl": "https://m.media-amazon.com/images/I/41XWOJvg1fL.jpg"
+            },
+            {
+              "id": "42827187-9a73-41ba-a62c-46e19cf1aab4",
+              "number": 15,
+              "isbn": "9782382882931",
+              "asin": "238288293X",
+              "imageUrl": "https://m.media-amazon.com/images/I/51CceULsaxL.jpg"
+            },
+            {
+              "id": "f59cde0e-2421-4982-b5d8-9d5f148ce89d",
+              "number": 16,
+              "isbn": "9782382882924",
+              "asin": "2382882921",
+              "imageUrl": "https://m.media-amazon.com/images/I/41jgBJQ2AyL.jpg"
             }
           ]
         }

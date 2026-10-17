@@ -42,6 +42,10 @@ export interface Measure extends Partial<Dimensions> {
   edition?: string | null;
 }
 
+export type Correction =
+  | { remove: string; volumes?: number[] }
+  | { add: string; audience: Audience | null; volumes: number[] };
+
 export interface Universe {
   name: string;
   series: string[];

@@ -7,3 +7,6 @@ const { token, store } = await fetchPublicPage(user);
 const kinds = await fetchKinds(token);
 
 await writeCollection(toCollection(user, store, kinds, new Date().toISOString()));
+console.warn(
+  "La page publique de Manga Collec peut être en retard. Pour une copie à jour : pbpaste | pnpm import:collection",
+);

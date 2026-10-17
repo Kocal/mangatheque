@@ -20,13 +20,20 @@ function widthOf(books: Book[]): number {
   return books.reduce((sum, book) => sum + book.dims.thickness, 0);
 }
 
-function toRow(books: Book[]): Row {
+export function toRow(books: Book[]): Row {
   return {
     books,
     width: widthOf(books),
     maxHeight: Math.max(0, ...books.map((b) => b.dims.height)),
     maxDepth: Math.max(0, ...books.map((b) => b.dims.width)),
   };
+}
+
+export function neededHeightOf(front: Row, back: Row | null, settings: Settings): number {
+  const tallest = back
+    ? Math.max(front.maxHeight, settings.riserHeight + back.maxHeight)
+    : front.maxHeight;
+  return tallest + settings.headroom;
 }
 
 export function fillRow(books: Book[], rowWidth: number): number {
@@ -92,7 +99,7 @@ export class CompartmentFiller {
       return null;
     }
     const front = toRow([...this.front]);
-    return { front, back: null, neededHeight: front.maxHeight + this.settings.headroom };
+    return { front, back: null, neededHeight: neededHeightOf(front, null, this.settings) };
   }
 
   double(): Filling | null {
@@ -104,9 +111,6 @@ export class CompartmentFiller {
     if (front.maxDepth + back.maxDepth > this.settings.innerDepth + EPSILON) {
       return null;
     }
-    const neededHeight =
-      Math.max(front.maxHeight, this.settings.riserHeight + back.maxHeight) +
-      this.settings.headroom;
-    return { front, back, neededHeight };
+    return { front, back, neededHeight: neededHeightOf(front, back, this.settings) };
   }
 }

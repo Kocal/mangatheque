@@ -21,7 +21,10 @@ const rowsOf = (front: Row, back: Row | null) =>
 <template>
   <div class="plan">
     <section v-for="bookcase in bookcases" :key="bookcase.index" class="card">
-      <h3>Billy {{ bookcase.index + 1 }}</h3>
+      <h3>
+        Billy {{ bookcase.index + 1 }}
+        <span v-if="bookcase.frozen" class="badge">figée</span>
+      </h3>
       <p class="shelves">
         Dessus des planches, depuis le sol :
         <span

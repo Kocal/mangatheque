@@ -1,5 +1,5 @@
 import { describe, expect, test } from "vite-plus/test";
-import { computeLayout, splitLongUnits } from "./layout.ts";
+import { computeLayout, freezeBookcase, splitLongUnits } from "./layout.ts";
 import { DEFAULT_SETTINGS, zoneHeights } from "./settings.ts";
 import { makeUnit } from "./test-helpers.ts";
 
@@ -64,6 +64,18 @@ describe("computeLayout", () => {
     expect(shape(layout)[0]).toEqual([
       { zone: "upper", front: 30, back: 0 },
       { zone: "upper", front: 30, back: 0 },
+    ]);
+  });
+
+  test("fills earlier compartments first when both splits cost the same", () => {
+    const layout = computeLayout(
+      [makeUnit("a", 40, 1.5), makeUnit("b", 8, 1.5), makeUnit("c", 40, 1.5)],
+      settings,
+    );
+
+    expect(shape(layout)[0]).toEqual([
+      { zone: "upper", front: 48, back: 0 },
+      { zone: "upper", front: 40, back: 0 },
     ]);
   });
 
@@ -181,5 +193,54 @@ describe("computeLayout regressions", () => {
       expect(c.bottom).toBeGreaterThanOrEqual(0);
       expect(c.bottom + c.height).toBeLessThanOrEqual(settings.innerHeight + 1e-6);
     }
+  });
+});
+
+describe("computeLayout with frozen bookcases", () => {
+  const two = { ...settings, bookcaseCount: 2 };
+  const ids = (layout: ReturnType<typeof computeLayout>, index: number) =>
+    layout.bookcases[index].compartments.map((c) => ({
+      front: c.front.books.map((b) => b.id),
+      back: c.back?.books.map((b) => b.id) ?? null,
+      height: c.height,
+      bottom: c.bottom,
+    }));
+
+  test("keeps a frozen bookcase as it was and plans the rest in the others", () => {
+    const before = computeLayout([makeUnit("a", 40, 1.5), makeUnit("b", 40, 1.5)], two);
+    const frozen = [freezeBookcase(before.bookcases[0])];
+
+    const after = computeLayout(
+      [makeUnit("a", 40, 1.5), makeUnit("b", 40, 1.5), makeUnit("c", 40, 1.5)],
+      two,
+      frozen,
+    );
+
+    expect(ids(after, 0)).toEqual(ids(before, 0));
+    expect(after.bookcases[0].frozen).toBe(true);
+    expect(shape(after)[1]).toEqual([{ zone: "upper", front: 40, back: 0 }]);
+    expect(after.placedCount).toBe(120);
+  });
+
+  test("places new volumes of a frozen series in the free bookcases", () => {
+    const before = computeLayout([makeUnit("a", 40, 1.5)], two);
+    const frozen = [freezeBookcase(before.bookcases[0])];
+
+    const after = computeLayout([makeUnit("a", 42, 1.5)], two, frozen);
+
+    expect(after.bookcases[1].compartments[0].front.books.map((b) => b.id)).toEqual([
+      "a-41",
+      "a-42",
+    ]);
+  });
+
+  test("drops frozen volumes that left the collection", () => {
+    const before = computeLayout([makeUnit("a", 40, 1.5)], two);
+    const frozen = [freezeBookcase(before.bookcases[0])];
+
+    const after = computeLayout([makeUnit("a", 30, 1.5)], two, frozen);
+
+    expect(after.bookcases[0].compartments[0].front.books).toHaveLength(30);
+    expect(after.placedCount).toBe(30);
   });
 });

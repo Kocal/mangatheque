@@ -1,4 +1,4 @@
-import { CompartmentFiller, fillRow } from "./compartment.ts";
+import { CompartmentFiller, fillRow, neededHeightOf, toRow } from "./compartment.ts";
 import type { Filling, Row } from "./compartment.ts";
 import { zoneHeights } from "./settings.ts";
 import { assignShelfHeights } from "./shelves.ts";
@@ -25,6 +25,7 @@ export interface Compartment {
 }
 
 export interface BookcaseLayout {
+  frozen?: boolean;
   index: number;
   compartments: Compartment[];
 }
@@ -107,20 +108,15 @@ function optionsFrom(units: Unit[], start: number, settings: Settings, maxSteps:
   return options;
 }
 
-export function computeLayout(rawUnits: Unit[], settings: Settings): Layout {
-  const bookcaseCount = Math.max(0, Math.floor(settings.bookcaseCount));
-  const bookcases: BookcaseLayout[] = Array.from({ length: bookcaseCount }, (_, index) => ({
-    index,
-    compartments: [],
-  }));
+function planBookcases(
+  rawUnits: Unit[],
+  settings: Settings,
+  indexes: number[],
+): { bookcases: BookcaseLayout[]; overflow: Book[] } {
+  const bookcases: BookcaseLayout[] = indexes.map((index) => ({ index, compartments: [] }));
 
-  if (bookcaseCount === 0 || !(settings.holePitch > 0)) {
-    return {
-      bookcases,
-      doubleCount: 0,
-      placedCount: 0,
-      overflow: rawUnits.flatMap((u) => u.books),
-    };
+  if (indexes.length === 0 || !(settings.holePitch > 0)) {
+    return { bookcases, overflow: rawUnits.flatMap((u) => u.books) };
   }
 
   const heights = zoneHeights(settings);
@@ -137,7 +133,7 @@ export function computeLayout(rawUnits: Unit[], settings: Settings): Layout {
   );
 
   const N = units.length;
-  const B = bookcaseCount;
+  const B = indexes.length;
   const M = maxMovable + 1;
   const H = Math.max(...caps) + 1;
   const index = (i: number, b: number, z: number, m: number, h: number) =>
@@ -145,6 +141,8 @@ export function computeLayout(rawUnits: Unit[], settings: Settings): Layout {
   const size = (N + 1) * B * 2 * M * H;
 
   const options = units.map((_, i) => optionsFrom(units, i, settings, maxSteps));
+  // Ties go to the layout that places units earlier; the whole term stays below one compartment.
+  const lateCost = COMPARTMENT_COST / (B * (M + 1) * N + 1);
   const cost = new Float64Array(size).fill(Infinity);
   const prev = new Int32Array(size).fill(-1);
   const action = new Int32Array(size);
@@ -180,7 +178,7 @@ export function computeLayout(rawUnits: Unit[], settings: Settings): Layout {
                   if (h + option.steps <= caps[z]) {
                     relax(
                       index(option.end, b, z, nextM, h + option.steps),
-                      current + option.cost,
+                      current + option.cost + (N - option.end) * lateCost,
                       state,
                       k,
                     );
@@ -224,7 +222,7 @@ export function computeLayout(rawUnits: Unit[], settings: Settings): Layout {
     } else if (how >= 0) {
       const { filling } = options[i][how];
       bookcases[b].compartments.push({
-        bookcase: b,
+        bookcase: indexes[b],
         zone: z === 0 ? "upper" : "lower",
         front: filling.front,
         back: filling.back,
@@ -239,6 +237,86 @@ export function computeLayout(rawUnits: Unit[], settings: Settings): Layout {
   }
 
   assignShelfHeights(bookcases, settings);
+  return { bookcases, overflow };
+}
+
+export interface FrozenCompartment {
+  zone: Zone;
+  front: string[];
+  back: string[] | null;
+  height: number;
+  bottom: number;
+}
+
+export interface FrozenBookcase {
+  index: number;
+  compartments: FrozenCompartment[];
+}
+
+export function freezeBookcase(bookcase: BookcaseLayout): FrozenBookcase {
+  return {
+    index: bookcase.index,
+    compartments: bookcase.compartments.map((c) => ({
+      zone: c.zone,
+      front: c.front.books.map((b) => b.id),
+      back: c.back?.books.map((b) => b.id) ?? null,
+      height: Math.round(c.height * 100) / 100,
+      bottom: Math.round(c.bottom * 100) / 100,
+    })),
+  };
+}
+
+function thaw(
+  frozen: FrozenBookcase,
+  books: Map<string, Book>,
+  settings: Settings,
+): BookcaseLayout {
+  const rowOf = (ids: string[]) => toRow(ids.flatMap((id) => books.get(id) ?? []));
+  return {
+    index: frozen.index,
+    frozen: true,
+    compartments: frozen.compartments.map((c) => {
+      const front = rowOf(c.front);
+      const back = c.back ? rowOf(c.back) : null;
+      return {
+        bookcase: frozen.index,
+        zone: c.zone,
+        front,
+        back,
+        neededHeight: neededHeightOf(front, back, settings),
+        height: c.height,
+        bottom: c.bottom,
+      };
+    }),
+  };
+}
+
+export function computeLayout(
+  units: Unit[],
+  settings: Settings,
+  frozen: FrozenBookcase[] = [],
+): Layout {
+  const bookcaseCount = Math.max(0, Math.floor(settings.bookcaseCount));
+  const kept = frozen.filter((f) => f.index < bookcaseCount);
+  const frozenIds = new Set(
+    kept.flatMap((f) => f.compartments.flatMap((c) => [...c.front, ...(c.back ?? [])])),
+  );
+  const books = new Map(units.flatMap((u) => u.books.map((b) => [b.id, b] as const)));
+  const freeIndexes = Array.from({ length: bookcaseCount }, (_, i) => i).filter(
+    (i) => !kept.some((f) => f.index === i),
+  );
+  const freeUnits = units.flatMap((unit) => {
+    const rest = unit.books.filter((b) => !frozenIds.has(b.id));
+    if (rest.length === unit.books.length) {
+      return [unit];
+    }
+    return rest.length > 0 ? [{ ...unit, books: rest, thickness: sumThickness(rest) }] : [];
+  });
+
+  const planned = planBookcases(freeUnits, settings, freeIndexes);
+  const bookcases = [...kept.map((f) => thaw(f, books, settings)), ...planned.bookcases].sort(
+    (a, b) => a.index - b.index,
+  );
 
   const compartments = bookcases.flatMap((bookcase) => bookcase.compartments);
   return {
@@ -248,6 +326,6 @@ export function computeLayout(rawUnits: Unit[], settings: Settings): Layout {
       (sum, c) => sum + c.front.books.length + (c.back?.books.length ?? 0),
       0,
     ),
-    overflow,
+    overflow: planned.overflow,
   };
 }

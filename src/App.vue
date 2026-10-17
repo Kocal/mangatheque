@@ -4,6 +4,7 @@ import { seriesColor } from "./colors.ts";
 import BookcaseView from "./components/BookcaseView.vue";
 import PlanList from "./components/PlanList.vue";
 import SettingsPanel from "./components/SettingsPanel.vue";
+import { useFrozen } from "./composables/useFrozen.ts";
 import { useHighlightStyle } from "./composables/useHighlightStyle.ts";
 import { useSettings } from "./composables/useSettings.ts";
 import { COLLECTION, DIMENSIONS, SAMPLE, volumeCount } from "./data/library.ts";
@@ -16,6 +17,7 @@ import { AUDIENCES } from "./domain/types.ts";
 import type { Audience, Book } from "./domain/types.ts";
 
 const { settings, reset } = useSettings();
+const { frozen, freeze, unfreeze, error: frozenError } = useFrozen();
 const dataset = ref<"sample" | "full">(
   new URLSearchParams(location.search).get("collection") === "echantillon" ? "sample" : "full",
 );
@@ -54,7 +56,9 @@ onUnmounted(() => window.removeEventListener("keydown", onKey));
 
 const collection = computed(() => (dataset.value === "sample" ? SAMPLE : COLLECTION));
 const units = computed(() => buildUnits(collection.value, DIMENSIONS, UNIVERSES, MEASURES));
-const layout = computed(() => computeLayout(units.value, settings.value));
+const layout = computed(() =>
+  computeLayout(units.value, settings.value, dataset.value === "full" ? frozen.value : []),
+);
 
 const colors = computed(
   () =>
@@ -154,8 +158,20 @@ const hoverText = computed(() => {
 
     <section v-if="focused" class="focus-mode">
       <div class="focus-head">
-        <h2>Billy {{ focused.index + 1 }}</h2>
+        <h2>
+          Billy {{ focused.index + 1 }}
+          <span v-if="focused.frozen" class="frozen-badge">figée</span>
+        </h2>
         <div class="focus-nav">
+          <button
+            v-if="dataset === 'full'"
+            type="button"
+            class="ghost"
+            title="Une Billy figée garde son contenu et ses planches, le plan ne change plus que dans les autres."
+            @click="focused.frozen ? unfreeze(focused.index) : freeze(focused)"
+          >
+            {{ focused.frozen ? "Défiger" : "Figer cette Billy" }}
+          </button>
           <button
             type="button"
             class="ghost"
@@ -175,6 +191,7 @@ const hoverText = computed(() => {
           </button>
         </div>
       </div>
+      <p v-if="frozenError" class="frozen-error">{{ frozenError }}</p>
       <div class="focus-body">
         <figure class="focus-figure">
           <BookcaseView
@@ -216,7 +233,7 @@ const hoverText = computed(() => {
           Billy {{ bookcase.index + 1 }} · {{ shelvesUsed(bookcase) }} planche{{
             shelvesUsed(bookcase) > 1 ? "s" : ""
           }}
-          · hauteurs en cm depuis le sol
+          · hauteurs en cm depuis le sol<template v-if="bookcase.frozen"> · figée</template>
         </figcaption>
       </figure>
     </section>
@@ -464,7 +481,25 @@ figcaption {
 }
 
 .focus-head h2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   margin: 0;
+}
+
+.frozen-badge {
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--accent-soft);
+}
+
+.frozen-error {
+  margin: 0 0 12px;
+  font-size: 13px;
+  color: var(--accent);
 }
 
 .focus-nav {

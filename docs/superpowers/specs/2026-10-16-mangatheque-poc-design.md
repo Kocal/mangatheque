@@ -117,6 +117,8 @@ Vue 3 avec TypeScript sur le projet Vite+ existant (`vp dev`, `vp test`, `vp che
 12. Les mesures prises à la main sont dans `src/data/measures.ts`, par série, et par édition si besoin. Elles passent devant Amazon et les estimations. Un tome reste hachuré tant qu'une de ses trois dimensions est estimée.
 13. La version publique de Manga Collec (page et API `/v2/user/<pseudo>/collection`) est en retard sur la version connectée. `src/data/corrections.ts` retire ou ajoute des séries ou des tomes au chargement de l'appli. Un ajout ne double jamais un tome déjà présent.
 14. Import à jour sans mot de passe : dans DevTools, onglet Réseau, Copy response sur `users/me/collection`, puis `pbpaste | pnpm import:collection`.
+15. À coût égal, le placement range les séries le plus tôt possible : chaque compartiment est rempli avant de passer au suivant, comme Hugo à la main.
+16. Une Billy rangée peut être figée depuis l'appli (`data/frozen.json`, écrit par `vp dev`). Elle garde ses tomes et ses planches, et le plan ne change plus que dans les autres Billy. Les nouveaux tomes d'une série figée vont dans les Billy libres.
 
 ## Reste à faire (relevé par la revue de code)
 

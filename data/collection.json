@@ -1,6 +1,6 @@
 {
   "user": "kocal",
-  "fetchedAt": "2026-10-16T22:14:37.899Z",
+  "fetchedAt": "2026-10-17T08:17:06.903Z",
   "series": [
     {
       "id": "75b19855-1948-4dca-9827-337af59699d2",
@@ -2537,6 +2537,13 @@
               "imageUrl": "https://m.media-amazon.com/images/I/410GumhQ-eL.jpg"
             },
             {
+              "id": "b7d08b41-6c51-44ba-8a8e-498f42f5ff07",
+              "number": 100,
+              "isbn": "9782505115069",
+              "asin": "2505115060",
+              "imageUrl": "https://m.media-amazon.com/images/I/517hvC26gLL.jpg"
+            },
+            {
               "id": "81dc1aa5-a9da-4b48-ab15-b98492b98923",
               "number": 105,
               "isbn": "9782505132776",
@@ -2571,34 +2578,6 @@
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Qcd7gVjKL.jpg"
             },
             {
-              "id": "da77f7ff-2726-4003-a463-2f5ac2976372",
-              "number": 2,
-              "isbn": "9782952450928",
-              "asin": "2952450927",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51LaXO6u0HL.jpg"
-            },
-            {
-              "id": "739cb9a0-cb42-41aa-b5a0-98a60762b232",
-              "number": 3,
-              "isbn": "9782952450959",
-              "asin": "2952450951",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51UW9xHfPxL.jpg"
-            },
-            {
-              "id": "08353a04-0a82-4c50-aa3d-8fb1ea098f3c",
-              "number": 4,
-              "isbn": "9782952450966",
-              "asin": "295245096X",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/516SLeT-UoL.jpg"
-            },
-            {
-              "id": "afac4247-3230-4e43-8865-9593972447d1",
-              "number": 5,
-              "isbn": "9782916739007",
-              "asin": "2916739009",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51ydPuxjP8L.jpg"
-            },
-            {
               "id": "90495263-294c-4585-ab17-2fd5a0f3c14a",
               "number": 6,
               "isbn": "9782916739052",
@@ -2606,39 +2585,11 @@
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51ndYePDJ5L.jpg"
             },
             {
-              "id": "2bca4a14-2436-4d52-92c1-b766c436eff6",
-              "number": 7,
-              "isbn": "9782916739274",
-              "asin": "2916739270",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Yq-7QoN7L.jpg"
-            },
-            {
               "id": "7540a1bb-0938-4e0d-9daf-99e24475dfc8",
               "number": 8,
               "isbn": "9782916739342",
               "asin": "2916739343",
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51lqnDqIMIL.jpg"
-            },
-            {
-              "id": "04041d77-2136-4bf6-a604-4e35288682a8",
-              "number": 9,
-              "isbn": "9782916739397",
-              "asin": "2916739394",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51apxJNlsYL.jpg"
-            },
-            {
-              "id": "fdbbe047-a4f0-43c7-b837-8dbef6d17866",
-              "number": 10,
-              "isbn": "9782916739564",
-              "asin": "2916739564",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51mJbudci5L.jpg"
-            },
-            {
-              "id": "e5cb0bc6-2e02-4716-9803-c3efdfd82b64",
-              "number": 11,
-              "isbn": "9782916739656",
-              "asin": "2916739653",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Y337D4x-L.jpg"
             },
             {
               "id": "6ea4b545-4da8-42a1-bfde-60e046f47b37",
@@ -2840,20 +2791,6 @@
               "isbn": "9782344056868",
               "asin": "2344056866",
               "imageUrl": "https://m.media-amazon.com/images/I/612wysFZX7L.jpg"
-            },
-            {
-              "id": "ea4ca5f6-0920-49d7-aba6-bb53cd8f77d6",
-              "number": 24,
-              "isbn": "9782344056967",
-              "asin": "2344056963",
-              "imageUrl": "https://m.media-amazon.com/images/I/51ch0WnS1hL.jpg"
-            },
-            {
-              "id": "d9296970-55c3-4c8e-bc2c-3f6c23e66706",
-              "number": 25,
-              "isbn": "9782344058480",
-              "asin": "2344058486",
-              "imageUrl": "https://m.media-amazon.com/images/I/51a5k93HiiL.jpg"
             },
             {
               "id": "d01f5576-7236-4392-a00f-820ff60748e5",
@@ -4234,89 +4171,6 @@
               "isbn": "9782820316615",
               "asin": "2820316611",
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51MkpAiJ%2BzL.jpg"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "e9c6e622-cfd4-44b2-91bc-07163a9760bd",
-      "title": "Infection",
-      "audience": "Shōnen",
-      "editions": [
-        {
-          "id": "b845caae-5ae6-47f6-a1c7-021eb962a833",
-          "title": null,
-          "volumes": [
-            {
-              "id": "8714415c-cdf8-46d8-81cd-e6ddaeb82a3d",
-              "number": 1,
-              "isbn": "9782756099026",
-              "asin": "2756099023",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51fMeSyFYmL.jpg"
-            },
-            {
-              "id": "8b0d42b8-b038-49bb-bb3d-41e779930022",
-              "number": 2,
-              "isbn": "9782413007463",
-              "asin": "2413007466",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51bBLQ%2ByInL.jpg"
-            },
-            {
-              "id": "37c6e522-88d7-4a30-8a56-95e9e377939e",
-              "number": 3,
-              "isbn": "9782413007470",
-              "asin": "2413007474",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51hF5sdg11L.jpg"
-            },
-            {
-              "id": "366afdbb-df4a-49ac-a7f7-4c5ec50ca31e",
-              "number": 4,
-              "isbn": "9782413007487",
-              "asin": "2413007482",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/514LLYQaxHL.jpg"
-            },
-            {
-              "id": "31411592-a4a7-44bd-b36f-47cfe43f707b",
-              "number": 5,
-              "isbn": "9782413007494",
-              "asin": "2413007490",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51VkrAwA4eL.jpg"
-            },
-            {
-              "id": "9a24de1b-18c1-47e0-8b9f-c620fcee3c63",
-              "number": 6,
-              "isbn": "9782413018346",
-              "asin": "2413018344",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51qe3Rp0t0L.jpg"
-            },
-            {
-              "id": "47c55b21-1ae6-490a-a307-478c8691fe49",
-              "number": 7,
-              "isbn": "9782413020387",
-              "asin": "2413020381",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51GJrG54OKL.jpg"
-            },
-            {
-              "id": "1e99caae-bd1c-496c-a761-3c5f82a6c6a1",
-              "number": 8,
-              "isbn": "9782413022336",
-              "asin": "2413022333",
-              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Flm4wuJrL.jpg"
-            },
-            {
-              "id": "6fff60aa-930d-4b65-bec0-c91150aaecae",
-              "number": 9,
-              "isbn": "9782413026471",
-              "asin": "2413026479",
-              "imageUrl": "https://m.media-amazon.com/images/I/51B5ZHVA6aL.jpg"
-            },
-            {
-              "id": "ed3878b4-2e58-4354-b1dc-3d898e0498e5",
-              "number": 10,
-              "isbn": "9782413028185",
-              "asin": "2413028188",
-              "imageUrl": "https://m.media-amazon.com/images/I/51rai43OIbL.jpg"
             }
           ]
         }
@@ -8179,6 +8033,136 @@
               "isbn": "9782818945254",
               "asin": "2818945259",
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61M3DcW4GnL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "f03e4cd4-4d51-46d4-8e6b-8507d6ec8918",
+      "title": "Re:Zero - 1er arc : Une journée à la capitale",
+      "audience": "Seinen",
+      "editions": [
+        {
+          "id": "c4464dd7-d3e4-4bbc-88a4-721ba6a92ecc",
+          "title": null,
+          "volumes": [
+            {
+              "id": "3822e635-fb4a-4ece-b1aa-f068ffe5eed6",
+              "number": 1,
+              "isbn": "9782377170067",
+              "asin": "2377170064",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51XWHSNj42L.jpg"
+            },
+            {
+              "id": "490bbe8f-0760-4147-b3ea-19c0b1ac63f6",
+              "number": 2,
+              "isbn": "9782377170074",
+              "asin": "2377170072",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51I4ssH65SL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e4c343c4-e29d-4348-bbde-e276c50bdd7d",
+      "title": "Re:Zero - 2e arc : Une semaine au manoir",
+      "audience": "Seinen",
+      "editions": [
+        {
+          "id": "8343172f-3101-4a3c-b9b2-8965333d9d9b",
+          "title": null,
+          "volumes": [
+            {
+              "id": "2519a4c9-074a-492b-9ead-29913660aa96",
+              "number": 1,
+              "isbn": "9782377170357",
+              "asin": "2377170358",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51-jerPnocL.jpg"
+            },
+            {
+              "id": "8a0ac4f2-622a-4db6-b55e-051ca5bc1d3c",
+              "number": 2,
+              "isbn": "9782377170630",
+              "asin": "2377170633",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61RGFRaYrdL.jpg"
+            },
+            {
+              "id": "f31cca53-1946-4c09-ae7b-88c6ad89b373",
+              "number": 3,
+              "isbn": "9782377170821",
+              "asin": "237717082X",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61RZfm4g4fL.jpg"
+            },
+            {
+              "id": "4f10f487-a8f2-4366-8951-1ae09c13014f",
+              "number": 4,
+              "isbn": "9782377170951",
+              "asin": "2377170951",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51E72raAlSL.jpg"
+            },
+            {
+              "id": "a5d80eae-e067-411f-b338-b63e113d8d4e",
+              "number": 5,
+              "isbn": "9782377171163",
+              "asin": "2377171168",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/617ITgdi84L.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "09a09456-12d0-41ca-90cf-fc61a907b28e",
+      "title": "Re:Zero - 3e Arc : Truth of Zero",
+      "audience": "Seinen",
+      "editions": [
+        {
+          "id": "c2785bb0-3643-4bb1-b925-a75205ac94a4",
+          "title": null,
+          "volumes": [
+            {
+              "id": "4ecc036e-bbe9-4c4a-8bd6-6eba5208af75",
+              "number": 1,
+              "isbn": "9782377171279",
+              "asin": "2377171273",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61YEti4W7%2BL.jpg"
+            },
+            {
+              "id": "f08bc640-386a-40fd-bcb3-323d4088fa84",
+              "number": 2,
+              "isbn": "9782377171477",
+              "asin": "2377171478",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51vGBMnekoL.jpg"
+            },
+            {
+              "id": "730abd60-3b0f-4167-815b-c13b7209020a",
+              "number": 3,
+              "isbn": "9782377171750",
+              "asin": "2377171753",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/519qlMQ1JfL.jpg"
+            },
+            {
+              "id": "cccca138-9217-4518-a112-d8ccc1429586",
+              "number": 4,
+              "isbn": "9782377172047",
+              "asin": "2377172040",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51mtFdhkljL.jpg"
+            },
+            {
+              "id": "327d7566-b8c2-46c6-b07d-d9f04937b48c",
+              "number": 5,
+              "isbn": "9782377172191",
+              "asin": "2377172199",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Rr73i2i2L.jpg"
+            },
+            {
+              "id": "69e0cf1e-24d5-4dbc-90ac-abba3ac95bf4",
+              "number": 6,
+              "isbn": "9782377172313",
+              "asin": "2377172318",
+              "imageUrl": "https://m.media-amazon.com/images/I/51XVnE7MpfL.jpg"
             }
           ]
         }

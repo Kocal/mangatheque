@@ -5,4 +5,5 @@ export const MEASURES: Measure[] = [
   { series: "Détective Conan", thickness: 1.36 },
   { series: "Fire Force", height: 17.5 },
   { series: "From the Children's Country", height: 21 },
+  { series: "Monster", height: 21, thickness: 3 },
 ];

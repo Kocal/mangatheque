@@ -1,6 +1,6 @@
 {
   "user": "kocal",
-  "fetchedAt": "2026-10-18T13:27:55.238Z",
+  "fetchedAt": "2026-10-18T13:44:08.946Z",
   "series": [
     {
       "id": "75b19855-1948-4dca-9827-337af59699d2",
@@ -9812,6 +9812,159 @@
               "isbn": "9782383162988",
               "asin": "2383162981",
               "imageUrl": "https://m.media-amazon.com/images/I/5120-Gmqt2L.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "e32fcee6-9778-4ff7-aa7a-ef9d8d5b78a6",
+      "title": "The Promised Neverland",
+      "audience": "Shōnen",
+      "editions": [
+        {
+          "id": "4c58cb6a-05c0-434d-9ae8-e65527814d1c",
+          "title": null,
+          "volumes": [
+            {
+              "id": "d5d1b1e1-56f3-4177-8e60-be0634f48795",
+              "number": 1,
+              "isbn": "9782820332233",
+              "asin": "2820332234",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51LFydEN8ML.jpg"
+            },
+            {
+              "id": "8d162f50-9378-43e5-a80c-f99c5d2eec35",
+              "number": 2,
+              "isbn": "9782820332431",
+              "asin": "2820332439",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/61vHNhf%2BKTL.jpg"
+            },
+            {
+              "id": "df6f831f-9f91-45d0-919f-95d7c2b5fad9",
+              "number": 3,
+              "isbn": "9782820332615",
+              "asin": "2820332617",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51hFUXgIh2L.jpg"
+            },
+            {
+              "id": "d93e2cef-794c-4f05-9c16-ed5351640f4d",
+              "number": 4,
+              "isbn": "9782820332844",
+              "asin": "2820332846",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51NKAmuI1XL.jpg"
+            },
+            {
+              "id": "364cec06-4d38-4518-a914-6747a0996803",
+              "number": 5,
+              "isbn": "9782820332950",
+              "asin": "2820332951",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51nqQaakcWL.jpg"
+            },
+            {
+              "id": "79ccc207-08a1-44f6-9b7c-130d1246cda5",
+              "number": 6,
+              "isbn": "9782820335234",
+              "asin": "2820335233",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51OKt-oiW3L.jpg"
+            },
+            {
+              "id": "9eaeea83-a16b-497f-97af-e4ef84373d8d",
+              "number": 7,
+              "isbn": "9782820335371",
+              "asin": "2820335373",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51USf3GC2wL.jpg"
+            },
+            {
+              "id": "0cd60009-ef6e-4c50-841a-51c3e7140bc5",
+              "number": 8,
+              "isbn": "9782820335517",
+              "asin": "2820335519",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51zJzk7WXcL.jpg"
+            },
+            {
+              "id": "6ef2fadf-e9bf-4113-ab11-4afaa498171d",
+              "number": 9,
+              "isbn": "9782820335715",
+              "asin": "2820335713",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51ypRF76BIL.jpg"
+            },
+            {
+              "id": "abf7de57-1eba-4800-90b6-c315aaaca9b7",
+              "number": 10,
+              "isbn": "9782820335814",
+              "asin": "2820335810",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51YQeO38%2BgL.jpg"
+            },
+            {
+              "id": "4ddacde6-5aae-4a74-9fab-74c72ebeff57",
+              "number": 11,
+              "isbn": "9782820335982",
+              "asin": "2820335985",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/5134Js0QPVL.jpg"
+            },
+            {
+              "id": "c6c0b0d2-cdf9-4a3e-900b-a145961a301d",
+              "number": 12,
+              "isbn": "9782820337795",
+              "asin": "2820337791",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51fy7fsLF-L.jpg"
+            },
+            {
+              "id": "c745c15a-4e2a-41ae-917b-5712c9657936",
+              "number": 13,
+              "isbn": "9782820337955",
+              "asin": "2820337953",
+              "imageUrl": "https://m.media-amazon.com/images/I/51wZYEE0atL.jpg"
+            },
+            {
+              "id": "e3317a93-1817-40b0-8ad4-6cd643187420",
+              "number": 14,
+              "isbn": "9782820338129",
+              "asin": "2820338127",
+              "imageUrl": "https://m.media-amazon.com/images/I/51oCd+1biUL.jpg"
+            },
+            {
+              "id": "cb28bb2f-497f-45e2-b0f2-b1240c2e2a98",
+              "number": 15,
+              "isbn": "9782820338297",
+              "asin": "2820338291",
+              "imageUrl": "https://m.media-amazon.com/images/I/51Uf63+wwPL.jpg"
+            },
+            {
+              "id": "199849df-b4e9-43a9-aca8-fc37d3cc0969",
+              "number": 16,
+              "isbn": "9782820338501",
+              "asin": "282033850X",
+              "imageUrl": "https://m.media-amazon.com/images/I/51Ad0Gdzg4L.jpg"
+            },
+            {
+              "id": "cd19d04e-596e-45b9-b5a7-4f6dae818038",
+              "number": 17,
+              "isbn": "9782820338679",
+              "asin": "2820338674",
+              "imageUrl": "https://m.media-amazon.com/images/I/51uEjthw1vL.jpg"
+            },
+            {
+              "id": "89ec37f8-daa4-455e-bd4a-f5c499145586",
+              "number": 18,
+              "isbn": "9782820340597",
+              "asin": "2820340598",
+              "imageUrl": "https://m.media-amazon.com/images/I/51wkYJ1l6YL.jpg"
+            },
+            {
+              "id": "a061946f-87c8-47d2-9bcb-9ceeea3e5994",
+              "number": 19,
+              "isbn": "9782820340764",
+              "asin": "2820340768",
+              "imageUrl": "https://m.media-amazon.com/images/I/51rbdtgPduL.jpg"
+            },
+            {
+              "id": "e5317dec-293c-4067-88cb-0e8489bd7cdc",
+              "number": 20,
+              "isbn": "9782820340887",
+              "asin": "2820340881",
+              "imageUrl": "https://m.media-amazon.com/images/I/51EUQI2pTIL.jpg"
             }
           ]
         }

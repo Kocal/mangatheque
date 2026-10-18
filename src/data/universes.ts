@@ -23,4 +23,5 @@ export const UNIVERSES: Universe[] = [
     name: "My Hero Academia",
     series: ["My Hero Academia", "Vigilante : My Hero Academia Illegals"],
   },
+  { name: "Naruto", series: ["Naruto", "La véritable histoire d'Itachi"] },
 ];

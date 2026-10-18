@@ -1,6 +1,6 @@
 {
   "user": "kocal",
-  "fetchedAt": "2026-10-17T09:07:28.635Z",
+  "fetchedAt": "2026-10-18T13:27:55.238Z",
   "series": [
     {
       "id": "75b19855-1948-4dca-9827-337af59699d2",
@@ -2804,6 +2804,130 @@
       ]
     },
     {
+      "id": "940629b6-a0df-4bd2-970d-b75d19336793",
+      "title": "Dragon Ball",
+      "audience": "Shōnen",
+      "editions": [
+        {
+          "id": "5239fb0a-1069-4859-8db1-52081d86ddf1",
+          "title": null,
+          "volumes": [
+            {
+              "id": "36dfd35f-f29e-4842-8260-8f75f03a7f10",
+              "number": 20,
+              "isbn": "9782723419239",
+              "asin": "2723419231",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51E4A5Z7J0L.jpg"
+            },
+            {
+              "id": "8ac35a50-3d3b-43a9-b0ac-12da6d5d6cc4",
+              "number": 21,
+              "isbn": "9782723418645",
+              "asin": "2723418642",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51PG17JATTL.jpg"
+            },
+            {
+              "id": "b47ca44a-f441-4b2d-a4ee-e9a9c1cd6010",
+              "number": 22,
+              "isbn": "9782723418652",
+              "asin": "2723418650",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/417WYPWEZFL.jpg"
+            },
+            {
+              "id": "ded74860-6c86-4840-bc41-c39f48dd1be1",
+              "number": 23,
+              "isbn": "9782723418669",
+              "asin": "2723418669",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51WAM161SRL.jpg"
+            },
+            {
+              "id": "e3c12ee2-c42f-422e-8398-25e8cea54068",
+              "number": 24,
+              "isbn": "9782723418676",
+              "asin": "2723418677",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/519VTSRCHVL.jpg"
+            },
+            {
+              "id": "d1404413-3cc8-4d76-a04a-2ecd11f97631",
+              "number": 25,
+              "isbn": "9782723422246",
+              "asin": "2723422240",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51CXEP90F3L.jpg"
+            },
+            {
+              "id": "8a4d820e-78e0-40ec-8891-73f39719d89d",
+              "number": 26,
+              "isbn": "9782723422253",
+              "asin": "2723422259",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/4102APHD8XL.jpg"
+            },
+            {
+              "id": "24634cb2-99e0-410f-b7a4-25555164856e",
+              "number": 27,
+              "isbn": "9782723422260",
+              "asin": "2723422267",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/41P9RR7EQBL.jpg"
+            },
+            {
+              "id": "00538c9f-f1a7-43fc-b6a2-6be0e23013bd",
+              "number": 28,
+              "isbn": "9782723423465",
+              "asin": "2723423468",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/41PV2ZT85QL.jpg"
+            },
+            {
+              "id": "70fd4e05-553e-4f58-b239-e70e9b03749c",
+              "number": 35,
+              "isbn": "9782723423533",
+              "asin": "2723423530",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/518DP6V5XYL.jpg"
+            },
+            {
+              "id": "1f932e49-0f09-45ce-9626-7bb9300cfe61",
+              "number": 36,
+              "isbn": "9782723423540",
+              "asin": "2723423549",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51EQ0CW463L.jpg"
+            },
+            {
+              "id": "82a37c27-4939-45d6-b530-6e48176c5afb",
+              "number": 37,
+              "isbn": "9782723427920",
+              "asin": "2723427927",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51RDVEQ00TL.jpg"
+            },
+            {
+              "id": "4609646a-a984-40cf-8cf0-888faae9918c",
+              "number": 39,
+              "isbn": "9782723428552",
+              "asin": "2723428559",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51PCP5H2V8L.jpg"
+            },
+            {
+              "id": "9e1f17a4-ebb5-496f-b0e2-ca57067055b2",
+              "number": 40,
+              "isbn": "9782723428569",
+              "asin": "2723428567",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51TYKEZJ38L.jpg"
+            }
+          ]
+        },
+        {
+          "id": "2c2f094a-9f59-4b07-911b-557c9799a489",
+          "title": "Edition double",
+          "volumes": [
+            {
+              "id": "68fbdd09-b910-4904-a85f-3ee9d84388d2",
+              "number": 21,
+              "isbn": "9782723447034",
+              "asin": "2723447030",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51TPQX47Y7L.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "91a59d75-ca4a-463e-8411-e177119e8dbe",
       "title": "Dreamin' Sun",
       "audience": "Shōjo",
@@ -5451,6 +5575,53 @@
       ]
     },
     {
+      "id": "86c4e017-cf20-4205-8f63-24952437eabd",
+      "title": "La sorcière du château aux chardons",
+      "audience": "Josei",
+      "editions": [
+        {
+          "id": "b2067e18-b41d-4bac-a941-57ccb7f00305",
+          "title": null,
+          "volumes": [
+            {
+              "id": "577388ae-44b9-4f48-9acc-2d27a40ec467",
+              "number": 1,
+              "isbn": "9782382124116",
+              "asin": "2382124113",
+              "imageUrl": "https://m.media-amazon.com/images/I/518-EE7rjZL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "7774dae5-1045-41b7-8584-cf7ec6801ed6",
+      "title": "La véritable histoire d'Itachi",
+      "audience": null,
+      "editions": [
+        {
+          "id": "8bed68f7-c3a8-4469-ab19-e2aa6bad4a7a",
+          "title": null,
+          "volumes": [
+            {
+              "id": "dab26ef3-f0ed-49c2-891f-e5826f62b249",
+              "number": 1,
+              "isbn": "9782505068778",
+              "asin": "2505068771",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51g3asyeRhL.jpg"
+            },
+            {
+              "id": "bee30b2d-217f-4c80-8017-5c1edbafe8f2",
+              "number": 2,
+              "isbn": "9782505070771",
+              "asin": "2505070776",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/512dmkAYMRL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "5e61cff6-a5c4-488d-9e4b-40893d30f081",
       "title": "La voie du tablier",
       "audience": "Seinen",
@@ -6704,6 +6875,26 @@
       ]
     },
     {
+      "id": "d1a38f41-2ac9-40cf-aa17-aeac9697e1c8",
+      "title": "Naruto",
+      "audience": "Shōnen",
+      "editions": [
+        {
+          "id": "345b6656-93a3-43d1-aeb0-6389a269c85d",
+          "title": null,
+          "volumes": [
+            {
+              "id": "6eead198-d0ea-4fa4-b29f-caa4816c4bf4",
+              "number": 38,
+              "isbn": "9782505004325",
+              "asin": "2505004323",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51cxyCopIkL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "e12a6896-2bce-4727-9c9f-4859613fffae",
       "title": "Neon-genesis evangelion",
       "audience": "Shōnen",
@@ -6889,6 +7080,40 @@
               "isbn": "9782377171682",
               "asin": "2377171680",
               "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51C1yfrognL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9dfc390b-7208-44dd-9e52-76c365e1f1d9",
+      "title": "Noise",
+      "audience": "Seinen",
+      "editions": [
+        {
+          "id": "8b5765f4-1b50-4fc2-bb6a-afbe05fee6f1",
+          "title": null,
+          "volumes": [
+            {
+              "id": "c6566808-e318-4c8e-b060-e4642f5de54c",
+              "number": 1,
+              "isbn": "9791032703113",
+              "asin": "B07DKWJWV3",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51Km%2BeAWblL.jpg"
+            },
+            {
+              "id": "d77e3568-e663-4177-b043-36c1d140a779",
+              "number": 2,
+              "isbn": "9791032704042",
+              "asin": "B07MBJKPVW",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51zJCBnpDCL.jpg"
+            },
+            {
+              "id": "3e8336d7-a67c-4c32-a1d4-ccc3642bd824",
+              "number": 3,
+              "isbn": "9791032705148",
+              "asin": "B07TLP9HDL",
+              "imageUrl": "https://m.media-amazon.com/images/I/51hc0yQEjML.jpg"
             }
           ]
         }
@@ -7847,6 +8072,47 @@
               "isbn": "9782820340856",
               "asin": "2820340857",
               "imageUrl": "https://m.media-amazon.com/images/I/51pUckIEygL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0dbbea25-0f64-418b-907c-389461fad121",
+      "title": "Pochi & Kuro",
+      "audience": "Shōnen",
+      "editions": [
+        {
+          "id": "57b42ce6-d81a-47af-a6d8-cc02c68e2715",
+          "title": null,
+          "volumes": [
+            {
+              "id": "fd13fec4-43f8-4a34-8fcc-d95ab6f25891",
+              "number": 1,
+              "isbn": "9782820328687",
+              "asin": "2820328687",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51M%2BOG7j38L.jpg"
+            },
+            {
+              "id": "d59eb050-f8d1-4268-91f0-41aa356974a3",
+              "number": 2,
+              "isbn": "9782820328694",
+              "asin": "2820328695",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51dM1JJHUBL.jpg"
+            },
+            {
+              "id": "b3cb4ac2-dcb0-4a7f-b68b-1e41cadfd50b",
+              "number": 3,
+              "isbn": "9782820329004",
+              "asin": "2820329004",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51WEH5pL4KL.jpg"
+            },
+            {
+              "id": "dca5cb79-b133-4dd3-95ae-3fedf2872f09",
+              "number": 4,
+              "isbn": "9782820329325",
+              "asin": "2820329322",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51MWMKR8m%2BL.jpg"
             }
           ]
         }
@@ -9586,6 +9852,26 @@
       ]
     },
     {
+      "id": "d17a8d20-5764-48bd-97ac-e5820b98bc69",
+      "title": "Tomié",
+      "audience": "Seinen",
+      "editions": [
+        {
+          "id": "149e5d61-fc6d-4457-a02f-c11bf81eeb6e",
+          "title": "Edition Poche",
+          "volumes": [
+            {
+              "id": "9f0fe84d-4480-423a-b79e-e09052779b48",
+              "number": 1,
+              "isbn": "9782382816967",
+              "asin": "2382816961",
+              "imageUrl": "https://m.media-amazon.com/images/I/51R-dWwudUL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "id": "51d7c705-12a3-4a1a-874b-a2fe94a28d97",
       "title": "Une sacrée mamie",
       "audience": "Seinen",
@@ -9600,6 +9886,33 @@
               "isbn": "9782413045090",
               "asin": "2413045090",
               "imageUrl": "https://m.media-amazon.com/images/I/51b7r82wygL.jpg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "c3b3deaf-070d-4620-a8ac-8eb852bc9546",
+      "title": "Vagabond",
+      "audience": "Seinen",
+      "editions": [
+        {
+          "id": "4379fca5-ac59-4583-ab10-99e7fc8d274c",
+          "title": null,
+          "volumes": [
+            {
+              "id": "2d4ba8e2-49eb-47d4-9b36-2e08f1d99add",
+              "number": 1,
+              "isbn": "9782845800670",
+              "asin": "2845800673",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51CPY1TC9ZL.jpg"
+            },
+            {
+              "id": "ccd35e22-27a0-488f-9c68-86271dca3099",
+              "number": 2,
+              "isbn": "9782845801158",
+              "asin": "2845801157",
+              "imageUrl": "https://images-eu.ssl-images-amazon.com/images/I/51NDMX770KL.jpg"
             }
           ]
         }

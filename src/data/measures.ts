@@ -7,6 +7,7 @@ export const MEASURES: Measure[] = [
   { series: "From the Children's Country", height: 21 },
   { series: "Kingdom", thickness: 1.92 },
   { series: "L'Ère des Cristaux", thickness: 1.5 },
+  { series: "La fille de la plage", height: 20 },
   { series: "La voie du tablier", thickness: 1.1 },
   { series: "Les Enfants d'Hippocrate", thickness: 1.35 },
   { series: "Mirror Game", height: 21 },
